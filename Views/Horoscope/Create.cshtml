@@ -1,0 +1,86 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model HoroscopeViewModel
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row report">
+        <div class="col-md-offset-4">
+
+            <form method="post" enctype="multipart/form-data" asp-controller="Horoscope" asp-action="Create">
+                <h3>Create New Horoscope Reading</h3>
+                <div class="form-group">
+                    <label asp-for="Author">Author</label>
+                    <input type="text" asp-for="Author" class="form-control" />
+                    <span asp-validation-for="Author"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title">Title</label>
+                    <input type="text" asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Desciption">Desciption</label>
+                    <input type="text" asp-for="Desciption" class="form-control" />
+                    <span asp-validation-for="Desciption"></span>
+                </div>
+
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label asp-for="BodyText">Body</label>
+                    <textarea asp-for="BodyText" class="form-control">...type here</textarea>
+                    <span asp-validation-for="BodyText"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Created">Date</label>
+                    <input type="datetime" asp-for="Created" class="form-control" />
+                    <span asp-validation-for="Created"></span>
+                </div>
+                <select asp-for="@Model.UserId" asp-items="@Model.UserList" class="form-control">
+                    <option>
+                        Show All
+                    </option>
+                </select>
+                @*<select asp-for="@Model.PartnerId" asp-items="@Model.PartnerList" class="form-control">
+                    <option>
+                        Show All
+                    </option>
+                </select>*@
+                <button type="submit" class="btn btn-success" asp-route-id="@Model.Id">Create Saturn Report</button>
+            </form>
+            <button id="open">Open Picker</button>
+            <div id="inline" style="width:600px;height:500px;padding:20px;"></div>
+
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        window.addEventListener('DOMContentLoaded', function () {
+            const apikey = 'ARmMcU9xDRoynBFAUXFEbz';
+            const client = filestack.init(apikey);
+            const options = {
+                displayMode: 'inline',
+                container: '#inline',
+                maxFiles: 20,
+                uploadInBackground: false,
+                onUploadDone: (res) => console.log(res),
+            };
+            const picker = client.picker(options);
+            const openBtn = document.getElementById('open');
+            openBtn.addEventListener('click', () => picker.open());
+        });
+
+
+    </script>
+}

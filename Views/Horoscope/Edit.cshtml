@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+
+@model IEnumerable<HoroscropeReading>
+@{
+    ViewData["Title"] = "Homepage";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Update</h2>
+            <form asp-controller="Horoscope" asp-action="Edit" method="post">
+                @foreach (var reading in Model)
+                {
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="form-group">
+                            <label asp-for="@reading.Title"></label>
+                            <input value="@reading.Title" asp-for="@reading.Title" class="form-control" />
+                            <span asp-validation-for="@reading.Title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@reading.Desciption"></label>
+                            <input asp-for="@reading.Desciption" class="form-control" />
+                            <span asp-validation-for="@reading.Desciption" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@reading.BodyText"></label>
+                            <input asp-for="@reading.BodyText" class="form-control" />
+                            <span asp-validation-for="@reading.BodyText" class="text-danger"></span>
+                        </div>
+
+                    </div>
+                    <button asp-controller="Horoscope" asp-action="Edit" asp-route-id="@reading.Id" type="submit" class="btn btn-default">Update</button>
+                }
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $("#theLink").hover(
+            function () {
+                $("#theDiv").fadeIn();
+            },
+            function () {
+                $("#theDiv").fadeOut();
+            }
+        );
+    </script>
+}

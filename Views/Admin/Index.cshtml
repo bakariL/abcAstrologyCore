@@ -1,0 +1,124 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model AdminViewModel
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-push-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <input class="blue" id="number" value="" />
+                <h4 class="card-header ">Saturn Report Request</h4>
+                <div class="card-body">
+                    <h5 class="card-title">view, edit, and create your Saturn Reports.</h5>
+                    <a asp-controller="SaturnReport" asp-action="ViewAll" class="btn btn-default">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <h4 class="card-header"> Calendar </h4>
+                <div class="card-body">
+                    <h5 class="card-title">view, edit, and create your schedule.</h5>
+                    <a href="#" class="btn btn-default">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <h4 class="card-header"> Users </h4>
+                <div class="card-body">
+                    <h5 class="card-title">view, edit, and create your customer list.</h5>
+                    <a asp-controller="Customer" asp-action="ViewAll" class="btn btn-default">View</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <h4 class="card-header"> Help </h4>
+                <div class="card-body">
+                    <h5 class="card-title">Helpful links, tips, and FAQs.</h5>
+                    <a href="#" class="btn btn-default">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card" id="leftPanel">
+                <h4 class="card-header"> Recent Activity </h4>
+                <h6> Total Users </h6>
+                <div class="card-body">
+                    <p> @Model.CustomerCount </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" id="rightPanel">
+                <h4 class="card-header"> New Users </h4>
+                <div class="card-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Active</th>
+                                <th>Date</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in Model.Customers)
+                            {
+                                <tr>
+                                    <td>@user.FirstName</td>
+                                    <td>@user.LastName</td>
+                                    <td>@user.IsActive</td>
+                                    <td>@user.DateRegistered</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card" id="midLeft">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">&nbsp;</div>
+    <div class="col-6">
+        <ul id="saturnRequestList"></ul>
+    </div>
+</div>     
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+
+@section Scripts {
+    <script type="text/javascript">
+
+    </script>
+}
+

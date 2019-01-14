@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+
+@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Homepage";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <h3>Details</h3>
+    <div class="col-md-9">
+        <div class="profile-content">
+            <table class="bootstrap-table table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">UserName</th>
+                    </tr>
+                </thead>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@customer.FirstName</td>
+                        <td>@customer.LastName</td>
+                        <td>@customer.UserName</td>
+                        <td>
+                            <a asp-controller="Customer" asp-action="Edit" asp-route-id="@customer.Id">Edit</a> |
+                            <a asp-controller="Customer" asp-action="Delete" asp-route-id="@customer.Id">Delete</a>
+                        </td>
+                    </tr>
+
+                }
+            </table>
+        </div>
+    </div>
+</div>
+

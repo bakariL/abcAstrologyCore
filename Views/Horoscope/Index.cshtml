@@ -1,0 +1,37 @@
+﻿@model HoroscopeViewModel
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <h2>Horoscope Readings</h2>
+    <br />
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card-view">
+                <img src="~/images/graybox.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Horoscope</h5>
+                    <p class="card-text">Create a new Horoscope here.</p>
+                    <a asp-controller="Horoscope" asp-action="Create" class="btn btn-primary"> Create Horoscope </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-view">
+                <img src="~/images/graybox.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">View Horoscopes</h5>
+                    <p class="card-text">View All Horoscopes here.</p>
+                    <a asp-controller="Horoscope" asp-action="ViewAll" class="btn btn-primary"> View All </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,196 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ckl.Areas.Identity.Services;
+using ckl.Data;
+using ckl.Models;
+using ckl.Models.ViewModels;
+using ckl.Services.Repositories;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace ckl.Controllers
+{
+    public class AdminController : Controller
+    {
+        private readonly ICustomerRepository _customerRepository;
+        private readonly ISaturnReportRepository _saturnReportRepository;
+        private readonly IHoroscopeRepository _horoscopeRepository;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManger;
+        private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext _context;
+        private readonly INewsLetterRepository _newsLetterRepository;
+
+        public AdminController(
+            ApplicationDbContext context,
+            ICustomerRepository customerRepository,
+            INewsLetterRepository newsLetterRepository,
+            ISaturnReportRepository saturnReportRepository,
+            IHoroscopeRepository horoscopeRepository, 
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager, 
+            IEmailSender emailSender
+            )
+        {
+            _context = context;
+            _customerRepository = customerRepository;
+            _saturnReportRepository = saturnReportRepository;
+            _signInManger = signInManager;
+            _userManager = userManager;
+            _emailSender = emailSender;
+            _horoscopeRepository = horoscopeRepository;
+            _newsLetterRepository = newsLetterRepository;
+        }
+
+        // GET: Admin
+        public ActionResult Index()
+        {
+            int requestNumber = 0;
+            var model = new AdminViewModel();
+            if (ModelState.IsValid)
+            {
+                model.NewsletterSubscribersCount = _newsLetterRepository.GetNewsletters().Count();
+                model.SaturnReportsCount = _saturnReportRepository.GetAllSaturnReports().Count();
+                model.ReadingsCount = _horoscopeRepository.GetAll().Count();
+                model.Customers = _customerRepository.GetAll();
+                model.CustomerCount = _customerRepository.GetAll().Count();
+                model.SaturnReportsRequested = requestNumber;
+                model.SaturnReports = _saturnReportRepository.GetAllSaturnReports();
+                model.CustomerList = _customerRepository.GetAll()
+                   .Select(x => new SelectListItem
+                   {
+                       Value = x.Id.ToString(),
+                       Text = x.UserName
+                   }).ToList();
+                model.Customers = _customerRepository.GetAll();
+            }
+            else
+            {
+                return NotFound();
+            }
+            
+            if(model.Customers.Count() > 0)
+            {
+                
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult SaturnRequest(Request request)
+        {
+
+
+            return View();
+        }
+
+
+
+        public IActionResult Send()
+        {
+
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult>Send(string email, string subject, string body)
+        {
+            await _emailSender.SendEmailAsync(email, subject, body);
+            return View();
+        }
+        // GET: Admin/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: Admin/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: Admin/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(IFormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Admin/Edit/5
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: Admin/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, IFormCollection collection)
+        {
+            try
+            {
+                // TODO: Add update logic here
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Admin/Delete/5
+        public IActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Admin/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id, IFormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        public IActionResult Calendar()
+        {
+            return View();
+        }
+
+        public IActionResult Settings()
+        {
+            return View();
+        }
+
+        public IActionResult Request()
+        {
+            return View();
+        }
+
+    }
+}

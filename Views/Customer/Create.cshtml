@@ -1,0 +1,37 @@
+﻿@model Customer
+
+using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Homepage";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h2>Create a User</h2>
+
+<form method="post" asp-controller="Customer" asp-action="Create">
+    <div class="form-group">
+        <label asp-for="FirstName">FirstName</label>
+        <input type="text" asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName">LastName</label>
+        <input type="text" asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input type="text" asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserName">UserName</label>
+        <input type="file" asp-for="UserName" class="form-control" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>

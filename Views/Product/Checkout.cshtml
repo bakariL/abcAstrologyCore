@@ -1,0 +1,181 @@
+﻿@model CustomerViewModel
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_ecommerceLayout1.cshtml";
+}
+
+<h2>Checkout</h2>
+<div class="container">
+    <form role="form" id="payment-form" method="post" asp-controller="Product" asp-action="Checkout">
+        <div class="row">
+            <div class=" col-md-5">
+                <div class="form-group">
+                    <label asp-for="FirstName">FirstName</label>
+                    <input type="text" asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+            <div class=" col-md-5">
+                <div class="form-group">
+                    <label asp-for="LastName">LastName</label>
+                    <input type="text" asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <label asp-for="UserName">UserName</label>
+                    <input type="text" asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName"></span>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input type="text" asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label asp-for="Address">Address</label>
+                    <input type="text" asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label asp-for="AddressTwo">Address 2</label>
+                    <input type="text" asp-for="AddressTwo" class="form-control" />
+                    <span asp-validation-for="AddressTwo"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="h">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Country">Country</label>
+                    <select>
+                        <option> Choose..</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="State">State</label>
+                    <select>
+                        <option> Choose..</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                    <label asp-for="ZipCode">Zip Code</label>
+                    <input type="text" asp-for="ZipCode" class="form-control" />
+                    <span asp-validation-for="ZipCode"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>       
+       
+        <div class="form-group">
+            <label asp-for="IsShipppingAddressSameAsBilling">Shipping address is the same as my billing</label>
+            <input type="checkbox" asp-for="IsShipppingAddressSameAsBilling" class="form-control" />
+            <span asp-validation-for="IsShipppingAddressSameAsBilling"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="InfoIsSaved">Save this information for next time</label>
+            <input type="checkbox" asp-for="InfoIsSaved" class="form-control" />
+            <span asp-validation-for="InfoIsSaved"></span>
+        </div>
+        <div class="row">
+            <!-- You can make it whatever width you want. I'm making it full width
+        on <= small devices and 4/12 page width on >= medium devices -->
+            <div class="col-xs-12 col-md-4">
+
+
+                <!-- CREDIT CARD FORM STARTS HERE -->
+                <div class="panel panel-default credit-card-box">
+                    <div class="panel-heading display-table">
+                        <div class="row display-tr">
+                            <h3 class="panel-title display-td">Payment Details</h3>
+                            <div class="display-td">
+                                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="cardNumber">CARD NUMBER</label>
+                                    <div class="input-group">
+                                        <input type="tel"
+                                               class="form-control"
+                                               name="cardNumber"
+                                               placeholder="Valid Card Number"
+                                               autocomplete="cc-number"
+                                               required autofocus />
+                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-7 col-md-7">
+                                <div class="form-group">
+                                    <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                    <input type="tel"
+                                           class="form-control"
+                                           name="cardExpiry"
+                                           placeholder="MM / YY"
+                                           autocomplete="cc-exp"
+                                           required />
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-md-5 pull-right">
+                                <div class="form-group">
+                                    <label for="cardCVC">CV CODE</label>
+                                    <input type="tel"
+                                           class="form-control"
+                                           name="cardCVC"
+                                           placeholder="CVC"
+                                           autocomplete="cc-csc"
+                                           required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="couponCode">COUPON CODE</label>
+                                    <input type="text" class="form-control" name="couponCode" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="subscribe btn btn-success btn-lg btn-block" type="button">Start Subscription</button>
+                            </div>
+                        </div>
+                        <div class="row" style="display:none;">
+                            <div class="col-xs-12">
+                                <p class="payment-errors"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- CREDIT CARD FORM ENDS HERE -->
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Continue to checkout</button>
+    </form>
+    </div>

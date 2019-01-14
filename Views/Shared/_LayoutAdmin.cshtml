@@ -1,0 +1,129 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject IHostingEnvironment Environment
+@inject ICompositeViewEngine Engine
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap-table/dist/bootstrap-table.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="~/css/adminStyle.css" />
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/Identity/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <nav id="mySidenav" class="sidenav profile-usermenu">
+        <ul class="nav">
+            <li class= "navli">
+                <a asp-controller="Admin" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Dashboard</span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Newsletter" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Newsletters </span>
+                </a>
+            </li>
+            <li class= "navli">
+
+                <a asp-controller="SaturnReport" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Saturn Reports </span>
+                </a>
+
+            </li>
+            <li class= "navli">
+                <a asp-controller="Horoscope" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Horoscopes </span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Customer" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Customers </span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Admin" asp-action="Calendar"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Calendar </span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Admin" asp-action="Send"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Send Message </span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Reports" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Create Report </span>
+                </a>
+            </li>
+            <li class= "navli">
+                <a asp-controller="Reports" asp-action="Index"  class="list-inline-item">
+                    <i class=""></i>
+                    <span> Settings </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="nav navbar-fixed-top" id="TopNavS">
+        <div class="row">
+            
+            <div class="col-md-4">
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <environment include="Development">
+        <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+        <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+        <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/Identity/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/Identity/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/Identity/js/site.min.js" asp-append-version="true"></script>
+        <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
+
+
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

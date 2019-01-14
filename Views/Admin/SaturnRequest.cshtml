@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SaturnReport>
+@{
+    ViewData["Title"] = "SaturnRequest";
+    Layout = "~/Views/Shared/_ecommerceLayout1.cshtml";
+}
+
+<h2>SaturnRequest</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <form asp-controller="report" asp-action="Edit" method="post">
+                @foreach (var report in Model)
+                {
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="form-group">
+                        <label asp-for="@report.UserEmail"></label>
+                        <input value="@report.UserEmail" asp-for="@report.UserEmail" class="form-control" />
+                        <span asp-validation-for="@report.UserEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@report.DateofBirth"></label>
+                        <input asp-for="@report.DateofBirth" class="form-control" />
+                        <span asp-validation-for="@report.DateofBirth" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@report.UserFirstName"></label>
+                        <input asp-for="@report.UserFirstName" class="form-control" />
+                        <span asp-validation-for="@report.UserFirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="@report.UserLastName"></label>
+                        <input asp-for="@report.UserLastName" class="form-control" />
+                        <span asp-validation-for="@report.UserLastName" class="text-danger"></span>
+                    </div>
+
+                </div>
+                    <button asp-controller="Saturn" asp-action="Create" asp-route-id="@report.Id" type="submit" class="btn btn-default">Update</button>
+                }
+            </form>
+        </div>
+    </div>
+</div>

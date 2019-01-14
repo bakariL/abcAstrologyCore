@@ -1,0 +1,42 @@
+﻿@model CustomerViewModel
+
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ckl.Data.ApplicationUser> SignInManager
+@inject UserManager<ckl.Data.ApplicationUser> UserManager
+@{
+    ViewData["Title"] = "User";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <h2>Customers</h2>
+    <br />
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="card-view">
+                <img src="~/images/graybox.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">Customer</h5>
+                    <p class="card-text">Create a new Customer here.</p>
+                    <a asp-controller="Customer" asp-action="Create" class="btn btn-primary"> Create Customer </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card-view">
+                <img src="~/images/graybox.png" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">View Customers</h5>
+                    <p class="card-text">View All Customers here.</p>
+                    <a asp-controller="Customer" asp-action="ViewAll" class="btn btn-primary"> View All </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+}

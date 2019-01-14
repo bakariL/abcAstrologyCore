@@ -1,0 +1,42 @@
+﻿@model CustomerViewModel
+
+@{
+    ViewData["Title"] = "ViewAll";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container">
+    <h2>ViewAll</h2>
+    <div class="col-md-9">
+        <div class="profile-content">
+            <form asp-controller="Customer" asp-action="Remove" method="post">
+
+                <table class="bootstrap-table table  table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">UserName</th>
+                        </tr>
+                    </thead>
+                    @foreach (var customer in Model.Customers)
+                    {
+                        <tr>
+                            <td>@customer.Id</td>
+                            <td>@customer.FirstName</td>
+                            <td>@customer.LastName</td>
+                            <td>@customer.UserName</td>
+                            <td>
+                                <a asp-controller="Customer" asp-action="Edit" asp-route-id="@customer.Id">Edit</a> |
+                                <a asp-controller="Customer" asp-action="Details" asp-route-id="@customer.Id">Details</a> |
+                                <a asp-controller="Customer" asp-action="Delete" asp-route-id="@customer.Id">Remove</a> 
+
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "Send";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="container">
+    <div class="row report">
+        <div class="col-md-offset-4">
+
+            <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Send">
+                <h3>Create Email </h3>
+                <div class="form-group">
+                    <label asp-for="Email">To</label>
+                    <input type="email" asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+              
+                <div class="form-group">
+                    <label asp-for="Subject">Subject</label>
+                    <input type="text" asp-for="Subject" class="form-control" />
+                    <span asp-validation-for="Subject"></span>
+                </div>
+
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Body">Body</label>
+                    <textarea asp-for="Body" class="form-control">...type here</textarea>
+                    <span asp-validation-for="Body"></span>
+                </div>
+                @*<select asp-for="@Model.UserId" asp-items="@Model.UserList" class="form-control">
+                    <option>
+                        Show All
+                    </option>
+                </select>
+                <select asp-for="@Model.PartnerId" asp-items="@Model.PartnerList" class="form-control">
+                    <option>
+                        Show All
+                    </option>
+                </select>*@
+                <button asp-controller="Admin" asp-action="Send" type="submit" class="btn btn-success">Send </button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
