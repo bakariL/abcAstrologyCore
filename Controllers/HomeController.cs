@@ -47,22 +47,18 @@ namespace ckl.Controllers
             var userId = _userManager.GetUserId(HttpContext.User);
             if (userId != null)
             {
-                if (userId != null)
-                {
                     ApplicationUser user = await _userManager.FindByIdAsync(userId);
                     if (await _userManager.IsInRoleAsync(user, "ADMIN"))
                     {
                         return RedirectPermanent("Admin/Index");
                     }
 
-                    else if (await _userManager.IsInRoleAsync(user, "CUSTOMER"))
+                    else if (await _userManager.IsInRoleAsync(user, "USER"))
                     {
-                        return RedirectPermanent("Customer/Index");
+                        return RedirectToAction("Index", "Home");
                     }
                     else
                         return RedirectPermanent("Home/AbcHome");
-
-                }
             }
             return View();
         }

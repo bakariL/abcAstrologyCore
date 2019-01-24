@@ -24,6 +24,7 @@ border: none !important;
     transition: 0.3s;
     width: 40%;
     border: 2px solid red;
+    max-height: 100px;
 }
 
     #card:hover {

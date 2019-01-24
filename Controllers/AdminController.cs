@@ -7,6 +7,7 @@ using ckl.Data;
 using ckl.Models;
 using ckl.Models.ViewModels;
 using ckl.Services.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -46,38 +47,46 @@ namespace ckl.Controllers
             _newsLetterRepository = newsLetterRepository;
         }
 
+
         // GET: Admin
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
             int requestNumber = 0;
             var model = new AdminViewModel();
             if (ModelState.IsValid)
             {
-                model.NewsletterSubscribersCount = _newsLetterRepository.GetNewsletters().Count();
-                model.SaturnReportsCount = _saturnReportRepository.GetAllSaturnReports().Count();
-                model.ReadingsCount = _horoscopeRepository.GetAll().Count();
-                model.Customers = _customerRepository.GetAll();
-                model.CustomerCount = _customerRepository.GetAll().Count();
-                model.SaturnReportsRequested = requestNumber;
-                model.SaturnReports = _saturnReportRepository.GetAllSaturnReports();
-                model.CustomerList = _customerRepository.GetAll()
-                   .Select(x => new SelectListItem
-                   {
-                       Value = x.Id.ToString(),
-                       Text = x.UserName
-                   }).ToList();
-                model.Customers = _customerRepository.GetAll();
-            }
-            else
-            {
-                return NotFound();
-            }
-            
-            if(model.Customers.Count() > 0)
-            {
-                
-            }
+                var userId = _userManager.GetUserId(HttpContext.User);
+                if (userId != null)
+                {
+                    ApplicationUser user = await _userManager.FindByIdAsync(userId);
 
+                    if (await _userManager.IsInRoleAsync(user, "ADMIN"))
+                    {
+                        model.NewsletterSubscribersCount = _newsLetterRepository.GetNewsletters().Count();
+                        model.SaturnReportsCount = _saturnReportRepository.GetAllSaturnReports().Count();
+                        model.ReadingsCount = _horoscopeRepository.GetAll().Count();
+                        model.Customers = _customerRepository.GetAll();
+                        model.CustomerCount = _customerRepository.GetAll().Count();
+                        model.SaturnReportsRequested = requestNumber;
+                        model.SaturnReports = _saturnReportRepository.GetAllSaturnReports();
+                        model.CustomerList = _customerRepository.GetAll()
+                           .Select(x => new SelectListItem
+                           {
+                               Value = x.Id.ToString(),
+                               Text = x.UserName
+                           }).ToList();
+                        model.Customers = _customerRepository.GetAll();
+                    }
+                    else if (await _userManager.IsInRoleAsync(user, "USER"))
+                    {
+                        return RedirectPermanent("Home/Index");
+                    }
+                }
+                else
+                {
+                    return RedirectPermanent("/Pages/Account/Login");
+                }
+            }
             return View(model);
         }
 
@@ -187,10 +196,6 @@ namespace ckl.Controllers
             return View();
         }
 
-        public IActionResult Request()
-        {
-            return View();
-        }
-
+  
     }
 }

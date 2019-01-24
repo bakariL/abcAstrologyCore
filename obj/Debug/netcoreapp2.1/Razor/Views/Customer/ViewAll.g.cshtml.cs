@@ -81,7 +81,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<div class=\"container\">\r\n    <h2>ViewAll</h2>\r\n    <div class=\"col-md-9\">\r\n        <div class=\"profile-content\">\r\n            ");
             EndContext();
             BeginContext(251, 1386, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b792d7a4a1c4baeba29a9fb929a3165", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5059424e8b92416c8a8be162fe32197b", async() => {
                 BeginContext(317, 444, true);
                 WriteLiteral(@"
 
@@ -146,7 +146,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral("</td>\r\n                            <td>\r\n                                ");
                 EndContext();
                 BeginContext(1167, 83, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e5da7fd5411406f91f21ff35e5cde2b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ee6c4d96430d40c9a4e8db7f41b47faa", async() => {
                     BeginContext(1242, 4, true);
                     WriteLiteral("Edit");
                     EndContext();
@@ -183,7 +183,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral(" |\r\n                                ");
                 EndContext();
                 BeginContext(1286, 89, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c37d8b9eb014c3ca3ebf1515153e290", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e060f2fc60854dcf857a615cae504e8a", async() => {
                     BeginContext(1364, 7, true);
                     WriteLiteral("Details");
                     EndContext();
@@ -220,7 +220,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral(" |\r\n                                ");
                 EndContext();
                 BeginContext(1411, 87, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d5ca06be9d8c47909550a4fa42fe0e38", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6339591d45dc473bbc37bd26a7b7ea64", async() => {
                     BeginContext(1488, 6, true);
                     WriteLiteral("Remove");
                     EndContext();

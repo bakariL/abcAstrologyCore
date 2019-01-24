@@ -10,8 +10,8 @@ using ckl.Data;
 namespace ckl.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190114190727_kjf")]
-    partial class kjf
+    [Migration("20190122111500_adf")]
+    partial class adf
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

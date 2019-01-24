@@ -43,7 +43,6 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identit
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.g.cshtml.cs
-C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPassword.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
@@ -104,3 +103,8 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\SaturnR
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Newsletter\ViewAll.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Horoscope\ViewAll.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\SaturnReport\Pending.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Registerss\RegisterViewComponent.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Admin\UserData.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CustomerData\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Admin\Default.g.cshtml.cs

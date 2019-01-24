@@ -2,7 +2,7 @@
 
 namespace ckl.Migrations
 {
-    public partial class kjf : Migration
+    public partial class adf : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

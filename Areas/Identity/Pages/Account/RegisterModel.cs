@@ -82,7 +82,7 @@ namespace ckl.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
         }
 
-    
+
         public async Task<IActionResult> OnPostAsync(string returnUrl = null, string partnerName = "default")
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -113,14 +113,14 @@ namespace ckl.Areas.Identity.Pages.Account
                         LastName = user.LastName,
                         UserName = user.UserName,
                         Email = user.Email,
-                        DateRegistered = DateTimeExtensions.EstNow() 
+                        DateRegistered = DateTimeExtensions.EstNow()
 
                     });
                     _customerRepository.Save();
                     _logger.LogInformation("User created a new account with password.");
 
                     //associate the user with the default partner                  
-                    
+
 
                     //await _partnerTypeAssociationRepository.Insert(new PartnerTypeAssociation
                     //{
