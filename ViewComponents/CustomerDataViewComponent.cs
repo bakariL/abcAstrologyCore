@@ -21,6 +21,9 @@ namespace ckl.ViewComponents
         {
             var _model = model ?? new CustomerViewModel();
             _model.Customers = _customerRepository.GetAll();
+            _model.CustomerCount = _customerRepository.GetAll().Count();
+            
+            
             return View(_model);
         }
 

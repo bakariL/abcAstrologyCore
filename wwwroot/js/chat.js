@@ -16,9 +16,11 @@ connection.start().catch(function (err) {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    var user = document.getElementById("userName").value;
-    var message = document.getElementById("email").value;
-    connection.invoke("SendMessage", user, message).catch(function (err) {
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
+    var email = document.getElementById("email").value;
+    var dob = document.getElementById("dob").value;
+    connection.invoke("SendMessage", firstName, lastName, email, dob).catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();

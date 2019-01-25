@@ -41,6 +41,8 @@ namespace ckl.Models
         public int CVV { get; set; }
         public DateTime DOB { get; set; }
         public DateTime? DOBwithTime { get; set; }
+        public int CustomerCount { get; set; }
+        public int AddedThisMonth { get; set; }
         public ICollection<IdentityRole> UserIdentityRoles { get; set; }
         public IEnumerable<SaturnReport> SaturnReports { get; set; }
         public IEnumerable<HoroscropeReading> HoroscropeReadings { get; set; }

@@ -61,7 +61,6 @@ C:\Users\blewis\Projects\abc\ckl\ckl\bin\Debug\netcoreapp2.1\credentials.json
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Newsletter\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Newsletter\Create.g.cshtml.cs
-C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Reports\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Error.g.cshtml.cs
@@ -105,6 +104,8 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Horosco
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\SaturnReport\Pending.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Register.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Registerss\RegisterViewComponent.g.cshtml.cs
-C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Admin\UserData.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CustomerData\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Indexx.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\TopPanelAdmin\Default.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Admin\Default.g.cshtml.cs

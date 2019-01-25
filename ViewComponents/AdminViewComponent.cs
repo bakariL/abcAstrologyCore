@@ -31,6 +31,14 @@ namespace ckl.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync(AdminViewModel model)
         {
             var _model = model ?? new AdminViewModel();
+            //show all users
+            _model.Customers = _customerRepository.GetAll();
+            //show total user count
+            //show user added/joined todays
+            //show users joined the week
+            //show users joined this month
+            //show most recent newsletter published 
+            //show saturn report request number
             return View(_model);
         }
     }

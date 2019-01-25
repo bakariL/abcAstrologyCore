@@ -66,7 +66,6 @@ namespace ckl.Controllers
                         model.SaturnReportsCount = _saturnReportRepository.GetAllSaturnReports().Count();
                         model.ReadingsCount = _horoscopeRepository.GetAll().Count();
                         model.Customers = _customerRepository.GetAll();
-                        model.CustomerCount = _customerRepository.GetAll().Count();
                         model.SaturnReportsRequested = requestNumber;
                         model.SaturnReports = _saturnReportRepository.GetAllSaturnReports();
                         model.CustomerList = _customerRepository.GetAll()

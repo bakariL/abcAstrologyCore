@@ -4,12 +4,10 @@
 @inject ICompositeViewEngine Engine
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-
     <environment include="Development">
         <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -28,109 +26,138 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+        <a class="navbar-brand mr-1" href="index.html"></a>
         <partial name="_loginPartilAdmin" />
-
-    </nav>
-    <aside class="col-12 col-md-2 p-0 bg-dark">
-        <nav id="mySidenav" class="navbar navbar-expand navbar-dark bg-dark flex-md-column flex-row align-items-start  py-2">
-            <div class="collapse navbar-collapse">
-                <ul class="flex-md-column flex-row navbar-nav w-100 justify-content-between">
-                    <li class="nav-item">
-                        <a asp-controller="Admin" asp-action="Index" class="nav-link pl-0">
-                            <i class=""></i>
-                            <span> Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Newsletter" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Newsletters </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-
-                        <a asp-controller="SaturnReport" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Saturn Reports </span>
-                        </a>
-
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Horoscope" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Horoscopes </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Customer" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Customers </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Admin" asp-action="Calendar" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Calendar </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Admin" asp-action="Send" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Send Message </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Reports" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Create Report </span>
-                        </a>
-                    </li>
-                    <li class="navli">
-                        <a asp-controller="Reports" asp-action="Index" class="list-inline-item">
-                            <i class=""></i>
-                            <span> Settings </span>
-                        </a>
-                    </li>
-                </ul>
+        <!-- Navbar Search -->
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
-        </nav>
-        </aside>
-
-        <div>
-            @RenderBody()
-        </div>
-        <environment include="Development">
-            <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
-            <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/Identity/js/site.js" asp-append-version="true"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-            <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
-            <script src="~/js/admin.js"></script>
-
-
-        </environment>
-        <environment exclude="Development">
-            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                    asp-fallback-src="~/Identity/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery"
-                    crossorigin="anonymous"
-                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-            </script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-                    asp-fallback-src="~/Identity/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                    crossorigin="anonymous"
-                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-            </script>
-            <script src="~/Identity/js/site.min.js" asp-append-version="true"></script>
-
-        </environment>
-
-        @RenderSection("Scripts", required: false)
-
+        </form>
+        <!-- Navbar -->
+        <ul class="navbar-nav ml-auto ml-md-0">
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-bell fa-fw"></i>
+                    <span class="badge badge-danger">9+</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-envelope fa-fw"></i>
+                    <span class="badge badge-danger">7</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="messagesDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle fa-fw"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Activity Log</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!--Side Navbar -->
+        <!--side nav links -->
+        <ul class="sidebar navbar-nav bg-light" id="sideNav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <h6 class="dropdown-header">Login Screens:</h6>
+                    <a class="dropdown-item" href="login.html">Login</a>
+                    <a class="dropdown-item" href="register.html">Register</a>
+                    <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header">Other Pages:</h6>
+                    <a class="dropdown-item" href="404.html">404 Page</a>
+                    <a class="dropdown-item" href="blank.html">Blank Page</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </li>
+        </ul>
+        <!--Bread Crumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Overview</li>
+        </ol>
+        @RenderBody()
+        <!--Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2018</span>
+                </div>
+            </div>
+        </footer>
+    <environment include="Development">
+        <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+        <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <script src="//static.filestackapi.com/filestack-js/1.x.x/filestack.min.js"></script>
+        <script src="~/js/admin.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/Identity/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+                asp-fallback-src="~/Identity/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/Identity/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,10 +20,15 @@ namespace ckl.Models.ViewModels
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [Display(Name = "Email")]
         public string CustomerEmail { get; set; }
         public string AdminImage { get; set; }
         public int CustomerId { get; set; }
         public int CustomerCount { get; set; }
+        [Display(Name = "Status")]
+        public bool IsActive { get; set; }
+        [Display(Name = "Registion Date")]
+        public DateTime SignUPDate { get; set; }
         public decimal BaseCost { get; set; }
         public DateTime DateofBirth { get; set; }
         public DateTime BeginningDateofBirth { get; set; }
@@ -37,7 +43,9 @@ namespace ckl.Models.ViewModels
         public int NewsletterSubscribersCount { get; set; }
         public int NewslettersCreated { get; set; }
         public int NewslettersSent { get; set; }
+        [Display(Name = "First Name")]
         public string CustomerFirstName { get; set; }
+        [Display(Name = "Last Name")]
         public string CustomerLastName { get; set; }
         public DateTime RegiterDate { get; set; }
         public DateTime DOB { get; set; }
