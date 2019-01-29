@@ -102,7 +102,7 @@ using ckl.Models.ViewModels;
                     ");
             EndContext();
             BeginContext(986, 101, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91e2bb32651a4fbd8e62e1642c3fd72d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34c67f036ef044079e3215d5dda51544", async() => {
                 BeginContext(1079, 4, true);
                 WriteLiteral("View");
                 EndContext();
@@ -146,7 +146,7 @@ using ckl.Models.ViewModels;
                     ");
             EndContext();
             BeginContext(1795, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "290318e4dae442e880a456d4eed19cd8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9446daabd464dec905a95741bd5984e", async() => {
                 BeginContext(1869, 4, true);
                 WriteLiteral("View");
                 EndContext();
@@ -232,7 +232,7 @@ using ckl.Models.ViewModels;
 ");
             EndContext();
             BeginContext(3418, 61, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "850def95465842beabf462cdcf82a48a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3ac086257b70452dad0fbdd1b4d39948", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -250,7 +250,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(3481, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "703a6c176beb4447860131d23839bf43", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f6e3c6fcc80643d2a424710d30ad2687", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

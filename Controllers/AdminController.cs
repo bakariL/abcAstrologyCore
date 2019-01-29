@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.SignalR;
+using SignalRChat.Hubs;
 
 namespace ckl.Controllers
 {
@@ -25,6 +27,7 @@ namespace ckl.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ApplicationDbContext _context;
         private readonly INewsLetterRepository _newsLetterRepository;
+        private readonly IHubContext<ChatHub> _hubContext;
 
         public AdminController(
             ApplicationDbContext context,
@@ -34,7 +37,8 @@ namespace ckl.Controllers
             IHoroscopeRepository horoscopeRepository, 
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, 
-            IEmailSender emailSender
+            IEmailSender emailSender,
+            IHubContext<ChatHub> hubContext
             )
         {
             _context = context;
@@ -45,13 +49,14 @@ namespace ckl.Controllers
             _emailSender = emailSender;
             _horoscopeRepository = horoscopeRepository;
             _newsLetterRepository = newsLetterRepository;
+            _hubContext = hubContext;
         }
 
 
         // GET: Admin
         public async Task<ActionResult> Index()
         {
-            int requestNumber = 0;
+            int requestNumber = 5;
             var model = new AdminViewModel();
             if (ModelState.IsValid)
             {

@@ -84,7 +84,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<div class=\"container\">\r\n    <h2>Saturn Reports</h2>\r\n    <br />\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-3\">\r\n            <div class=\"card-view\">\r\n                ");
             EndContext();
             BeginContext(464, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "371b58ad84d14294885c441ad9cfec8d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3d10fc689cb64783ade3ed59106a3912", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -103,7 +103,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">Saturn Report</h5>\r\n                    <p class=\"card-text\">Create a new Saturn Report here.</p>\r\n                    ");
             EndContext();
             BeginContext(724, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2acdb675a1004a5c9fb74ac6c9d3e9fd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c129c21592f4df1bae5c2a50720b3f3", async() => {
                 BeginContext(801, 22, true);
                 WriteLiteral(" Create Saturn Report ");
                 EndContext();
@@ -128,7 +128,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-lg-3\">\r\n            <div class=\"card-view\">\r\n                ");
             EndContext();
             BeginContext(974, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e0a51ed35ce247eea541b5955f9d2aea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "1df47be324f149f1bfc0299b41a680a3", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -147,7 +147,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">View Saturn Reports</h5>\r\n                    <p class=\"card-text\">View All Saturn Reports here.</p>\r\n                    ");
             EndContext();
             BeginContext(1237, 92, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8629768eb1b8482994b4c783e10f45e0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c3e87940478f43b2aace1a1bcc90a47a", async() => {
                 BeginContext(1315, 10, true);
                 WriteLiteral(" View All ");
                 EndContext();

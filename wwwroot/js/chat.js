@@ -7,7 +7,7 @@ connection.on("ReceiveMessage", function (user, message) {
     var encodedMsg = user + " says " + msg;
     var li = document.createElement("li");
     li.textContent = encodedMsg;
-    document.getElementById("saturnRequestList").appendChild(li);
+    document.getElementById("messagesList").appendChild(li);
     incrementValue();
 });
 
@@ -16,11 +16,9 @@ connection.start().catch(function (err) {
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
-    var firstName = document.getElementById("firstName").value;
-    var lastName = document.getElementById("lastName").value;
-    var email = document.getElementById("email").value;
-    var dob = document.getElementById("dob").value;
-    connection.invoke("SendMessage", firstName, lastName, email, dob).catch(function (err) {
+    var user = document.getElementById("userInput").value;
+    var message = document.getElementById("messageInput").value;
+    connection.invoke("SendMessage", user, message).catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();

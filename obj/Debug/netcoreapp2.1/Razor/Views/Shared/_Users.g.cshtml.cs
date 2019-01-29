@@ -108,7 +108,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("</td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(500, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e96c5ec81c08415284c1fc30ce3f9213", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "77a0a3aac62a4090b1c0ea08273e28f0", async() => {
                 BeginContext(575, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -145,7 +145,7 @@ using ckl.Models.ViewModels;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(603, 86, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3666a816b0b148559767b4a44c0940d6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2231a7e03f05401d91234560ea363987", async() => {
                 BeginContext(678, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -182,7 +182,7 @@ using ckl.Models.ViewModels;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(709, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e1ab03d9d5b3404ebee971296cc47ef4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "909988f5c4de43889b1cf56ea870e325", async() => {
                 BeginContext(786, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

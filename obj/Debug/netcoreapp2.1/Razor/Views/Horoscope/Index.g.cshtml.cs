@@ -83,7 +83,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<div class=\"container\">\r\n    <h2>Horoscope Readings</h2>\r\n    <br />\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-3\">\r\n            <div class=\"card-view\">\r\n                ");
             EndContext();
             BeginContext(464, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "586b47b4a0734e8d9855e6a2fffdda77", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8b077159375044e5b4b9e852da754247", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -102,7 +102,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">Horoscope</h5>\r\n                    <p class=\"card-text\">Create a new Horoscope here.</p>\r\n                    ");
             EndContext();
             BeginContext(716, 96, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e2d543e3a9f415e85f6c91034d12390", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cb0061f5a6c24621867a52ed66188acd", async() => {
                 BeginContext(790, 18, true);
                 WriteLiteral(" Create Horoscope ");
                 EndContext();
@@ -127,7 +127,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                </div>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-lg-3\">\r\n            <div class=\"card-view\">\r\n                ");
             EndContext();
             BeginContext(959, 55, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e02d148f06624d978eda5b9d2197a732", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bc5ff5b6459a497f9f4f62bffe0640a2", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -146,7 +146,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n                <div class=\"card-body\">\r\n                    <h5 class=\"card-title\">View Horoscopes</h5>\r\n                    <p class=\"card-text\">View All Horoscopes here.</p>\r\n                    ");
             EndContext();
             BeginContext(1214, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "466a5201236f4bc1acfa26e8691caf89", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "13b3a4966b76467c8c8d792274cf8077", async() => {
                 BeginContext(1289, 10, true);
                 WriteLiteral(" View All ");
                 EndContext();

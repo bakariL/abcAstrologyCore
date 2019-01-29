@@ -130,7 +130,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("</td>\r\n                        <td>\r\n                            ");
             EndContext();
             BeginContext(1070, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "97130857b2f3401dba546fb508b3a0a2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "185051c5047e4374a10fa25cb0cc8523", async() => {
                 BeginContext(1149, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -167,7 +167,7 @@ using ckl.Models.ViewModels;
             WriteLiteral(" |\r\n                            ");
             EndContext();
             BeginContext(1189, 91, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57642643833c4271816f45f95646356a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef231386d1624bf89da7b165d87ca51c", async() => {
                 BeginContext(1270, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

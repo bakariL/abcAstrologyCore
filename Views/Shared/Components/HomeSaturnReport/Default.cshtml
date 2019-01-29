@@ -1,0 +1,58 @@
+﻿@model SaturnReportViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Default</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 mx-auto">
+            <h3>Get your free report</h3>
+            <form method="post" asp-controller="SaturnReport" asp-action="Request">
+                <div class="form-group">
+                    <label asp-for="UserFirstName">FirstName</label>
+                    <input type="text" asp-for="UserFirstName" id="userInput" class="form-control" />
+                    <span asp-validation-for="UserFirstName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserFirstName">LastName</label>
+                    <input type="text" asp-for="UserFirstName" id="messageInput" class="form-control" />
+                    <span asp-validation-for="UserFirstName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserEmail">Email</label>
+                    <input type="email" asp-for="UserEmail" id="email" class="form-control" />
+                    <span asp-validation-for="UserEmail"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateofBirth">UserName</label>
+                    <input type="date" asp-for="DateofBirth" id="dob" class="form-control" />
+                    <span asp-validation-for="DateofBirth"></span>
+                </div>
+                <div class="row">&nbsp;</div>
+                <div class="row">
+                    <div class="col-6">&nbsp;</div>
+
+                    Email<input type="text" id="email" />
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <hr />
+                    </div>
+                </div>
+                <input type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
+            </form>
+
+    </div>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>
+</html>

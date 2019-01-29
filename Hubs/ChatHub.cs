@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace SignalRChat.Hubs
 {
-    public class ChatHub : Hub
+    public interface IChatClient
+    {
+        Task ReceiveMessage(string user, string message);
+        Task ReceiveMessage(string message);
+    }
+    public class ChatHub : Hub<IChatClient>
     {
         private readonly ApplicationDbContext _context;
 
@@ -13,9 +18,20 @@ namespace SignalRChat.Hubs
         {
             _context =context;
         }
+
         public async Task SendMessage(string user, string message)
         {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
+            await Clients.All.ReceiveMessage(user, message);
+        }
+
+        public Task SendMessageToCaller(string message)
+        {
+            return Clients.Caller.ReceiveMessage(message);
+        }
+
+        public Task SendMessageToGroup(string message)
+        {
+            return Clients.Group("SignalR Users").ReceiveMessage("ReceiveMessage", message);
         }
     }
 }

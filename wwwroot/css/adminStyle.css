@@ -6,20 +6,14 @@ body {
     background-color:#ededed;
 }
 
-
-.navbar-nav  li  a{
-
-}
-
 #sideNav{
 
-    height: 100vh;
-    position:sticky;
-    margin-top: -20px;
-    padding-left: 15px;
-    width: 200px;
-    max-width: 205px;
-    
+ float: left !important;
+   
+}
+
+#midRow{
+    float:left;
 }
 
 
@@ -40,18 +34,6 @@ body {
         width: 100%;       
     }
 
-#leftPanel{
-    height: 400px;
-}
-
-#rightPanel {
-    height: 400px;
-}
-
-#midLeft{
-
-    height: 250px;
-}
 
 
 input.blue {

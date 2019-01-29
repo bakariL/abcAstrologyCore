@@ -1,0 +1,83 @@
+﻿@model  HomeViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Default</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <div class="panel panel-danger panel-pricing">
+                    <div class="panel-heading">
+                        <i class="fas fa-sun fa-7x"></i>
+                        <h3>6 month subscription</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p><strong>$100 / Month</strong></p>
+                    </div>
+                    <ul class="list-group text-center">
+                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                    </ul>
+                    <div class="panel-footer">
+
+                        <a asp-controller="Product" asp-action="Details" class="btn btn-lg btn-block btn-danger">SIGN UP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /item -->
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <div class="panel panel-warning panel-pricing">
+                    <div class="panel-heading">
+                        <i class="far fa-moon fa-7x"></i>
+                        <h3>1 year subscription</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p><strong>$200 / Month</strong></p>
+                    </div>
+                    <ul class="list-group text-center">
+                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-warning" href="#">SIGN UP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /item -->
+            <!-- item -->
+            <div class="col-md-4 text-center">
+                <div class="panel panel-success panel-pricing">
+                    <div class="panel-heading">
+                        <i class="fas fa-fish fa-7x"></i>
+                        <h3>2 year subscription</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p><strong>$300 / Month</strong></p>
+                    </div>
+                    <ul class="list-group text-center">
+                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
+                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-lg btn-block btn-success" href="#">SIGN UP NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /item -->
+        </div>
+    </div>
+</body>
+</html>

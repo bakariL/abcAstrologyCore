@@ -1,0 +1,68 @@
+﻿@model HomeViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Default</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h3>How it Works</h3>
+            <div class="col-md-3 mx-auto">
+                <div class="card-view">
+                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Order the
+                            Free Saturn Report
+                        </h5>
+                        <a asp-controller="Home" asp-action="Saturn" class="btn btn-link"> Learn more </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mx-auto">
+                <div class="card-view">
+                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Order the
+                            Free sample newsletter
+                        </h5>
+                        <a asp-controller="Home" asp-action="Newsletter" class="btn btn-link"> Learn more </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mx-auto">
+                <div class="card-view">
+                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Sign up for the
+                            monthly newsletter
+                        </h5>
+                        <a asp-controller="NewsLetter" asp-action="Index" class="btn btn-link"> Learn more </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mx-auto">
+                <div class="card-view">
+                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Order a
+                            horoscope reading
+                        </h5>
+                        <a asp-controller="Horoscope" asp-action="Index" class="btn btn-link"> Learn more </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -109,3 +109,12 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Admin\I
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\TopPanelAdmin\Default.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Admin\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\SideNav\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\DataChart\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\HomeSaturnReport\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\LearningCenter\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\NewsLetterEmail\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\WhySaturn\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\HowItWorks\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Plans\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Mission\Default.g.cshtml.cs

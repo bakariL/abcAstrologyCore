@@ -19,283 +19,39 @@
         </div>
     </header>
 </div>
+
 <section id="SaturnReport" class="my-5">
-    <div class="container">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 mx-auto">
-            <h3>Get your free report</h3>
-            <form method="post" asp-controller="SaturnReport" asp-action="Request">
-                <div class="form-group">
-                    <label asp-for="UserFirstName">FirstName</label>
-                    <input type="text" asp-for="UserFirstName" id="firstName" class="form-control" />
-                    <span asp-validation-for="UserFirstName"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="UserFirstName">LastName</label>
-                    <input type="text" asp-for="UserFirstName" id="lastName" class="form-control" />
-                    <span asp-validation-for="UserFirstName"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="UserEmail">Email</label>
-                    <input type="email" asp-for="UserEmail" id="email" class="form-control" />
-                    <span asp-validation-for="UserEmail"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="DateofBirth">UserName</label>
-                    <input type="date" asp-for="DateofBirth" id="dob" class="form-control" />
-                    <span asp-validation-for="DateofBirth"></span>
-                </div>      
-                    <div class="row">&nbsp;</div>
-                    <div class="row">
-                        <div class="col-6">&nbsp;</div>
-                       
-                            Email<input type="text" id="email" />
-                        
-                        </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <hr />
-                        </div>
-                  </div>        
-                <input type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
-            </form>
-        </div>
-    </div>
+    @await Component.InvokeAsync("HomeSaturnReport")
 </section>
-
-
-
 <section id="LearningCenter" class="my-5">
-    <div class="container">
-        <div class="row">
-            <h3>Learning Center</h3>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">Fire</h5>
-                        <p class="card-text">Fire is energy. It is always in motion. Always restless energy. High levels of activity, needs plenty of room to roam and opportunities to assert self; sports, staying active</p>
-                        <a asp-controller="Home" asp-action="Fire" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">Earth</h5>
-                        <p class="card-text">Earth stands still. It is steady, solid and stable. Introspective, cautious about new circumstances or situations, touch is important, physical evidence, hands-on learning.</p>
-                        <a asp-controller="Home" asp-action="Earth" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">Air</h5>
-                        <p class="card-text">Air is what's between people. It's a connector. It’s communication where you have a give and take. Important to make mental connections, friends, social situations are a powerful feature this child’s life.</p>
-                        <a asp-controller="Home" asp-action="Air" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">Water</h5>
-                        <p class="card-text">Water takes the shape of whatever container it is in. Sensitive, uncomfortable around new people or different environments, (sensitive to vibrations), encourage child to trust intuition, encourage artistic or creative expression in fun and play.</p>
-                        <a asp-controller="Home" asp-action="Water" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("LearningCenter")
 </section>
 <section id="newsletterEmail" class="my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 mx-auto">
-                <h3>Sign up for weekly News, Updates, and More </h3>
-                <form asp-controller="Newsletter" asp-action="Create" method="post">
-                    <div class="form-group">
-                        <label asp-for="UserEmail">Enter Email</label>
-                        <input type="text" asp-for="UserEmail" class="form-control" />
-                        <span asp-validation-for="UserEmail"></span>
-                    </div>
-
-                    <input type="submit" class="btn btn-block" />
-                </form>
-            </div>
-        </div>
-    </div>
+    @await Component.InvokeAsync("NewsLetterEmail")
 </section>
-<section id="whySaturn" class="my-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 mx-auto">
-                <div class="card-view">
-                    <div class="card-body">
-                        <h3 class="card-title">Why Saturn Report</h3>
-                        <p class="card-text">
-                            But do you know where Saturn was on the day you were born and WHY this is important? Saturn is our teacher of discipline, structure, form, and responsibility. These qualities are essential to character.
-                            In the child’s chart, we can see Saturn operating as the force of discipline, responsibility, and structure. Saturn acquaints us with the realities of existence on the physical plane
-                        </p>
-                        <a asp-controller="Home" asp-action="WhySaturn" class="btn btn-link"> Read more </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="howItWorks" class="my-5">
-    <div class="container">
-        <div class="row">
-            <h3>How it Works</h3>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Order the
-                            Free Saturn Report
-                        </h5>
-                        <a asp-controller="Home" asp-action="Saturn" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Order the
-                            Free sample newsletter
-                        </h5>
-                        <a asp-controller="Home" asp-action="Newsletter" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Sign up for the
-                            monthly newsletter
-                        </h5>
-                        <a asp-controller="NewsLetter" asp-action="Index" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mx-auto">
-                <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            Order a
-                            horoscope reading
-                        </h5>
-                        <a asp-controller="Horoscope" asp-action="Index" class="btn btn-link"> Learn more </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Plans -->
-<section id="plans">
-    <div class="container">
-        <div class="row">
-            <!-- item -->
-            <div class="col-md-4 text-center">
-                <div class="panel panel-danger panel-pricing">
-                    <div class="panel-heading">
-                        <i class="fas fa-sun fa-7x"></i>
-                        <h3>6 month subscription</h3>
-                    </div>
-                    <div class="panel-body text-center">
-                        <p><strong>$100 / Month</strong></p>
-                    </div>
-                    <ul class="list-group text-center">
-                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
-                    </ul>
-                    <div class="panel-footer">
+    <section id="whySaturn" class="my-5">
+        @await Component.InvokeAsync("WhySaturn")
+    </section>
+    <section id="howItWorks" class="my-5">
+        @await Component.InvokeAsync("HowItWorks")
+    </section>
+    <!-- Plans -->
+    <section id="plans">
+        @await Component.InvokeAsync("Plans")
 
-                        <a asp-controller="Product" asp-action="Details" class="btn btn-lg btn-block btn-danger">SIGN UP NOW</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /item -->
-            <!-- item -->
-            <div class="col-md-4 text-center">
-                <div class="panel panel-warning panel-pricing">
-                    <div class="panel-heading">
-                        <i class="far fa-moon fa-7x"></i>
-                        <h3>1 year subscription</h3>
-                    </div>
-                    <div class="panel-body text-center">
-                        <p><strong>$200 / Month</strong></p>
-                    </div>
-                    <ul class="list-group text-center">
-                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
-                    </ul>
-                    <div class="panel-footer">
-                        <a class="btn btn-lg btn-block btn-warning" href="#">SIGN UP NOW</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /item -->
-            <!-- item -->
-            <div class="col-md-4 text-center">
-                <div class="panel panel-success panel-pricing">
-                    <div class="panel-heading">
-                        <i class="fas fa-fish fa-7x"></i>
-                        <h3>2 year subscription</h3>
-                    </div>
-                    <div class="panel-body text-center">
-                        <p><strong>$300 / Month</strong></p>
-                    </div>
-                    <ul class="list-group text-center">
-                        <li class="list-group-item"><i class="fa fa-check"></i> Personal use</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> Unlimited projects</li>
-                        <li class="list-group-item"><i class="fa fa-check"></i> 27/7 support</li>
-                    </ul>
-                    <div class="panel-footer">
-                        <a class="btn btn-lg btn-block btn-success" href="#">SIGN UP NOW</a>
-                    </div>
-                </div>
-            </div>
-            <!-- /item -->
-        </div>
-    </div>
-</section>
+    </section>
+    <section id="mission">
+        @await Component.InvokeAsync("Mission")
 
-<section id="mission">
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8 mx-auto">
-            <h3>Our Mission</h3>
-            <p>
-                Parenting is both an honor and a blessing, and often very challenging. Our mission is to help you understand your child through astrology so that you can develop your child’s potential to become who they really are. We can identify your child’s emotional needs, learning style, talents, and gifts. Abc astrology provides a customized blueprint unique to your child.
-            </p>
-        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/js/chat.js"></script>
 
-    </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="~/lib/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/chat.js"></script>
+    @section Scripts {
+        <script type="text/javascript">
 
-@section Scripts {
-    <script type="text/javascript">
-
-    </script>
-}
+        </script>
+    }
 
