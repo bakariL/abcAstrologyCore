@@ -1,8 +1,8 @@
 ﻿
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext("2d");
-var saturn = document.getElementById('').value();
-console.log("the answwer is ******" + saturn);
+//var saturn = document.getElementById('').value();
+//console.log("the answwer is ******" + saturn);
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {

@@ -95,11 +95,11 @@ namespace ckl.Controllers
         }
 
         [HttpGet]
-        public IActionResult SaturnRequest(Request request)
+        public IActionResult SaturnRequest(int? id)
         {
+            var model = new Request();
 
-
-            return View();
+            return View(model);
         }
 
 

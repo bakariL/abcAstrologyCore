@@ -20,6 +20,7 @@ namespace ckl.Models.ViewModels
         public string Author { get; set; }
         public string CustomerId { get; set; }
         public string UserId { get; set; }
+        public string Gender { get; set; }
         public string PartnerId { get; set; }
         public int UserIntId { get; set; }
         public string FileId { get; set; }

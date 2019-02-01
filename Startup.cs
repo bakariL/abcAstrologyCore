@@ -77,6 +77,7 @@ namespace ckl
             //})
             
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<ChatHub >();
             services.AddScoped<IPartnerTypeAssociationRepository, PartnerTypeAssociationRepository>();
             services.AddScoped<IPartnerRepository, PartnerRepository>();
             services.AddScoped<IHoroscopeRepository, HoroscopeRepository>();

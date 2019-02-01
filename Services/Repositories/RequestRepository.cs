@@ -10,6 +10,8 @@ namespace ckl.Services.Repositories
     public interface IRequestRepository
     {
         IQueryable<Request> GetAll();
+        int CountAll(IQueryable<Request> requests);
+        void Update(IQueryable<Request> requests);
         void Add(Request request);
         void Delete(Request request);
         void Save();
@@ -40,10 +42,19 @@ namespace ckl.Services.Repositories
         {
             return _context.Request;
         }
+        public int CountAll(IQueryable<Request> requests)
+        {
+           return _context.Request.Count();
+        }
 
         public void Save()
         {
             _context.SaveChanges();
+        }
+
+        public void Update(IQueryable<Request> requests)
+        {
+            _context.Request.UpdateRange(requests);
         }
     }
 }

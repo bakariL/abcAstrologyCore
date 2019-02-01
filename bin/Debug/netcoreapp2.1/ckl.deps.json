@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "d32fec55a9dc718a14c63dc3cb7d4001e3b2e087"
+    "signature": "b5822a945b21776db0c8ba0182639cbd87c0aab8"
   },
   "compilationOptions": {
     "defines": [
@@ -27,6 +27,7 @@
           "Google.Apis.Calendar.v3": "1.36.1.1384",
           "MailKit": "2.0.6",
           "Microsoft.AspNet.SignalR": "2.4.0",
+          "Microsoft.AspNet.SignalR.Client": "2.4.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.4",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.4",
@@ -132,6 +133,20 @@
         }
       },
       "Microsoft.AspNet.SignalR/2.4.0": {},
+      "Microsoft.AspNet.SignalR.Client/2.4.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.0.18317"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
+        }
+      },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -3857,6 +3872,13 @@
       "sha512": "sha512-EZUnyn6U9s6mwA50dZ/nJHsDZAJNcrEC/pCJiaL0UR5xTDo5wZHn82dLAWVo7mbjKQOfrf6O8O9l6lIUbAsl0g==",
       "path": "microsoft.aspnet.signalr/2.4.0",
       "hashPath": "microsoft.aspnet.signalr.2.4.0.nupkg.sha512"
+    },
+    "Microsoft.AspNet.SignalR.Client/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I5VvYyS/smVX93pxMd8jQ1MY+lEH9/IeJzm5trcdVicl4PIqYDNxZWFf+36RY+b21HGu4toe0OlB9QZSF6gWCw==",
+      "path": "microsoft.aspnet.signalr.client/2.4.0",
+      "hashPath": "microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

@@ -18,12 +18,12 @@
             <form method="post" asp-controller="SaturnReport" asp-action="Request">
                 <div class="form-group">
                     <label asp-for="UserFirstName">FirstName</label>
-                    <input type="text" asp-for="UserFirstName" id="userInput" class="form-control" />
+                    <input type="text" asp-for="UserFirstName" id="firstName" class="form-control" />
                     <span asp-validation-for="UserFirstName"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="UserFirstName">LastName</label>
-                    <input type="text" asp-for="UserFirstName" id="messageInput" class="form-control" />
+                    <input type="text" asp-for="UserFirstName" id="lastName" class="form-control" />
                     <span asp-validation-for="UserFirstName"></span>
                 </div>
                 <div class="form-group">
@@ -48,9 +48,9 @@
                         <hr />
                     </div>
                 </div>
-                <input type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
+                <input  type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
             </form>
-
+            </div>
     </div>
     <script src="~/lib/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/chat.js"></script>

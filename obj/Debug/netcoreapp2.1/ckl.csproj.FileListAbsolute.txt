@@ -118,3 +118,6 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\HowItWorks\Default.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Plans\Default.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\Mission\Default.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Index.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\SendMessage.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\SendMessageToGroup.g.cshtml.cs

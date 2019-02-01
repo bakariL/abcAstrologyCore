@@ -81,6 +81,18 @@
       "Microsoft.AspNet.SignalR/2.4.0": {
         "type": "package"
       },
+      "Microsoft.AspNet.SignalR.Client/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -5091,6 +5103,28 @@
         ".signature.p7s",
         "microsoft.aspnet.signalr.2.4.0.nupkg.sha512",
         "microsoft.aspnet.signalr.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.SignalR.Client/2.4.0": {
+      "sha512": "I5VvYyS/smVX93pxMd8jQ1MY+lEH9/IeJzm5trcdVicl4PIqYDNxZWFf+36RY+b21HGu4toe0OlB9QZSF6gWCw==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.client/2.4.0",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.xml",
+        "microsoft.aspnet.signalr.client.2.4.0.nupkg.sha512",
+        "microsoft.aspnet.signalr.client.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -13338,6 +13372,7 @@
       "Google.Apis.Calendar.v3 >= 1.36.1.1384",
       "MailKit >= 2.0.6",
       "Microsoft.AspNet.SignalR >= 2.4.0",
+      "Microsoft.AspNet.SignalR.Client >= 2.4.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.4",
@@ -13397,6 +13432,10 @@
             "version": "[2.0.6, )"
           },
           "Microsoft.AspNet.SignalR": {
+            "target": "Package",
+            "version": "[2.4.0, )"
+          },
+          "Microsoft.AspNet.SignalR.Client": {
             "target": "Package",
             "version": "[2.4.0, )"
           },

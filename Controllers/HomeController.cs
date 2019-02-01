@@ -55,9 +55,9 @@ namespace ckl.Controllers
 
                     else if (await _userManager.IsInRoleAsync(user, "USER"))
                     {
-                        return RedirectToAction("Index", "Home");
-                    }
-                    else
+                    return RedirectPermanent("Home/AbcHome");
+                }
+                else
                         return RedirectPermanent("Home/AbcHome");
             }
             return View();

@@ -5,6 +5,7 @@ using ckl.Services.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using SignalRChat.Hubs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace ckl.Controllers
         private readonly ISaturnReportRepository _saturnReportRepository;
         private readonly IPartnerRepository _partnerRepository;
         private readonly IRequestRepository _requestRepository;
+        private readonly ChatHub _chatHub;
 
         public SaturnReportController(
             ApplicationDbContext context,
@@ -30,7 +32,8 @@ namespace ckl.Controllers
             ICustomerRepository customerRepository,
             ISaturnReportRepository saturnReportRepository,
             IPartnerRepository partnerRepository, 
-            IRequestRepository requestRepository
+            IRequestRepository requestRepository, 
+            ChatHub chatHub
             )
         {
             _context = context;
@@ -40,6 +43,7 @@ namespace ckl.Controllers
             _partnerRepository = partnerRepository;
             _saturnReportRepository = saturnReportRepository;
             _requestRepository = requestRepository;
+            _chatHub = chatHub;
         }
 
         public IActionResult Index()
@@ -164,6 +168,14 @@ namespace ckl.Controllers
             var model = new SaturnReportViewModel();
             model.SaturnReports = _saturnReportRepository.GetAllSaturnReports();
             return View(model);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Request(string firstname, string lastname, DateTime dob)
+        {
+            await _chatHub.SendMessage(firstname, lastname, dob);
+            return RedirectToAction("Index", "Admin");
         }
 
 

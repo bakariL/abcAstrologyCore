@@ -75,7 +75,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
             EndContext();
             BeginContext(119, 314, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e1f6b8acc0a844c4867d37c9f21d7974", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b38e548f932d488cbc3bbec68048ff2d", async() => {
                 BeginContext(125, 301, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"">
@@ -102,7 +102,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(435, 782, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "88d8d4f8ef4f436ebd54328cf956d4e8", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "99e7ada0844041e28120e0a26649d8bd", async() => {
                 BeginContext(455, 108, true);
                 WriteLiteral("\r\n    <div class=\"container\">\r\n        <div class=\"card mb-3\">\r\n            <!-- Icon Cards-->\r\n            ");
                 EndContext();
@@ -137,7 +137,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral("\r\n        </div>\r\n    </div>\r\n    <!-- Scroll to Top Button-->\r\n    <a class=\"scroll-to-top rounded\" href=\"#page-top\">\r\n        <i class=\"fas fa-angle-up\"></i>\r\n    </a>\r\n    <script src=\"https://code.jquery.com/jquery-3.3.1.min.js\"></script>\r\n");
                 EndContext();
                 BeginContext(1109, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bb2bb47dbc4d4bcca7fbf66dd2d8a291", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d255e0a2ea64901a1cdd83f21db290e", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -155,7 +155,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral("\r\n");
                 EndContext();
                 BeginContext(1172, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d650fb58669941778c517e462e842999", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de045e32772e491fad502a826464a99e", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
