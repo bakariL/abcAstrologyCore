@@ -2,27 +2,25 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Default</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container container-fluid">
         <div class="col-md-2"></div>
         <div class="col-md-8 mx-auto">
             <h3>Get your free report</h3>
             <form method="post" asp-controller="SaturnReport" asp-action="Request">
                 <div class="form-group">
-                    <label asp-for="UserFirstName">FirstName</label>
+                    <label asp-for="UserFirstName">First Name</label>
                     <input type="text" asp-for="UserFirstName" id="firstName" class="form-control" />
                     <span asp-validation-for="UserFirstName"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="UserFirstName">LastName</label>
+                    <label asp-for="UserFirstName">Last Name</label>
                     <input type="text" asp-for="UserFirstName" id="lastName" class="form-control" />
                     <span asp-validation-for="UserFirstName"></span>
                 </div>
@@ -32,17 +30,11 @@
                     <span asp-validation-for="UserEmail"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="DateofBirth">UserName</label>
+                    <label asp-for="DateofBirth">Birthdate</label>
                     <input type="date" asp-for="DateofBirth" id="dob" class="form-control" />
                     <span asp-validation-for="DateofBirth"></span>
                 </div>
                 <div class="row">&nbsp;</div>
-                <div class="row">
-                    <div class="col-6">&nbsp;</div>
-
-                    Email<input type="text" id="email" />
-
-                </div>
                 <div class="row">
                     <div class="col-12">
                         <hr />

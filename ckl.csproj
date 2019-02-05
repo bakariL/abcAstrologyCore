@@ -5,12 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20181226205249_radsds.cs" />
-    <Compile Remove="Migrations\20181226205249_radsds.Designer.cs" />
-    <Compile Remove="Migrations\20181228160358_okkk.cs" />
-    <Compile Remove="Migrations\20181228160358_okkk.Designer.cs" />
-    <Compile Remove="Migrations\20190114190727_kjf.cs" />
-    <Compile Remove="Migrations\20190114190727_kjf.Designer.cs" />
+    <Compile Remove="Migrations\20190204193931_first.cs" />
+    <Compile Remove="Migrations\20190204193931_first.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

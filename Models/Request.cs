@@ -11,12 +11,13 @@ namespace ckl.Models
         public int Id { get; set; }
         public int Count { get; set; }
         public string UniqueId { get; set; }
+        public string Gender { get; set; }
         public string  UserFirstName { get; set; }
         public string  UserLastName { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime  UserDOB { get; set; }
-        public string Gender { get; set; }
+        public int UserZip { get; set; }
         public string Email { get; set; }
         public string Type { get; set; }
         public string UserName { get; set; }

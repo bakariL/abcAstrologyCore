@@ -77,7 +77,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("    ");
             EndContext();
             BeginContext(203, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "501e0089818b47b4ad1c9c29c07a6f97", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d723b05d4bca4f45a11192839aecfe1c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -100,7 +100,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<div>\r\n    <div class=\"row profile\">\r\n        <div class=\"col-md-3\">\r\n            <div class=\"profile-sidebar\">\r\n                <!-- SIDEBAR USERPIC -->\r\n                <div class=\"profile-userpic\">\r\n                    ");
             EndContext();
             BeginContext(503, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a1eeebb66255401986088c0b5fcace82", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4163952519f74ffea47bd98135b8d706", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -173,7 +173,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("ofile-content\">\r\n                <table class=\"bootstrap-table table\">\r\n                    <thead>\r\n                        <tr>\r\n                            ");
             EndContext();
             BeginContext(2767, 26, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "145fdf4d127c445a8494ce5eb12cce09", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "bd3cdc233c2d4b8d8afc0eb2f52cb428", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

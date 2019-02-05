@@ -13,8 +13,9 @@ body {
     padding-right: 15px;
 }
 
+
 #theDiv {
-    display:inline-block;
+    display: inline-block;
 }
 
 /* Carousel */

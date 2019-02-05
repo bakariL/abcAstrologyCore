@@ -28,6 +28,8 @@ namespace ckl.Controllers
         private readonly ApplicationDbContext _context;
         private readonly INewsLetterRepository _newsLetterRepository;
         private readonly IHubContext<ChatHub> _hubContext;
+        private readonly IRequestRepository _requestRepository;
+
 
         public AdminController(
             ApplicationDbContext context,
@@ -38,6 +40,7 @@ namespace ckl.Controllers
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager, 
             IEmailSender emailSender,
+            IRequestRepository requestRepository,
             IHubContext<ChatHub> hubContext
             )
         {
@@ -49,6 +52,7 @@ namespace ckl.Controllers
             _emailSender = emailSender;
             _horoscopeRepository = horoscopeRepository;
             _newsLetterRepository = newsLetterRepository;
+            _requestRepository = requestRepository;
             _hubContext = hubContext;
         }
 
@@ -94,11 +98,11 @@ namespace ckl.Controllers
             return View(model);
         }
 
-        [HttpGet]
         public IActionResult SaturnRequest(int? id)
         {
-            var model = new Request();
-
+            var model = new RequestViewModel();
+            model.RequestsIE = _requestRepository.GetAll();
+            
             return View(model);
         }
 
@@ -106,7 +110,6 @@ namespace ckl.Controllers
 
         public IActionResult Send()
         {
-
             return View();
         }
         [HttpPost]

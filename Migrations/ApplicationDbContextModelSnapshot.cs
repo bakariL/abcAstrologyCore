@@ -172,7 +172,7 @@ namespace ckl.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Customers","dbo");
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("ckl.Models.HoroscropeReading", b =>
@@ -186,6 +186,10 @@ namespace ckl.Migrations
 
                     b.Property<decimal>("BaseCost");
 
+                    b.Property<string>("BirthCity");
+
+                    b.Property<int>("BirthZipCode");
+
                     b.Property<string>("BodyText");
 
                     b.Property<DateTime>("Created");
@@ -194,15 +198,33 @@ namespace ckl.Migrations
 
                     b.Property<string>("Desciption");
 
+                    b.Property<DateTime>("Dob");
+
+                    b.Property<string>("FatherFullName");
+
+                    b.Property<string>("Gender");
+
                     b.Property<int>("HorosopeId");
 
                     b.Property<string>("Image");
 
                     b.Property<bool>("IsSubscribed");
 
+                    b.Property<string>("MiddleName");
+
+                    b.Property<string>("MiddleNametwo");
+
+                    b.Property<string>("MothersFullName");
+
                     b.Property<string>("PartnerId");
 
                     b.Property<Guid?>("PartnerId1");
+
+                    b.Property<string>("SecondFirstName");
+
+                    b.Property<string>("State");
+
+                    b.Property<DateTime>("TimeOfBirth");
 
                     b.Property<string>("Title");
 
@@ -213,6 +235,8 @@ namespace ckl.Migrations
                     b.Property<string>("UserId");
 
                     b.Property<string>("UserName");
+
+                    b.Property<int>("UserZip");
 
                     b.HasKey("Id");
 
@@ -459,6 +483,8 @@ namespace ckl.Migrations
                     b.Property<string>("UserLastName");
 
                     b.Property<string>("UserName");
+
+                    b.Property<int>("UserZip");
 
                     b.HasKey("Id");
 

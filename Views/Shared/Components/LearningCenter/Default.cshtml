@@ -11,12 +11,14 @@
     <title>Default</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container container-fluid">
+        <h3>Learning Center</h3>
         <div class="row">
-            <h3>Learning Center</h3>
             <div class="col-md-3 mx-auto">
                 <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="card-img-top">
+                        <source src="~/videos/Fire.mp4" type="video/mp4" />
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Fire</h5>
                         <p class="card-text">Fire is energy. It is always in motion. Always restless energy. High levels of activity, needs plenty of room to roam and opportunities to assert self; sports, staying active</p>
@@ -26,8 +28,10 @@
             </div>
             <div class="col-md-3 mx-auto">
                 <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
                     <div class="card-body">
+                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="card-img-top">
+                            <source src="~/videos/Earth.mp4" type="video/mp4" />
+                        </video>
                         <h5 class="card-title">Earth</h5>
                         <p class="card-text">Earth stands still. It is steady, solid and stable. Introspective, cautious about new circumstances or situations, touch is important, physical evidence, hands-on learning.</p>
                         <a asp-controller="Home" asp-action="Earth" class="btn btn-link"> Learn more </a>
@@ -36,7 +40,9 @@
             </div>
             <div class="col-md-3 mx-auto">
                 <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="card-img-top">
+                        <source src="~/videos/Air.mp4" type="video/mp4" />
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Air</h5>
                         <p class="card-text">Air is what's between people. It's a connector. It’s communication where you have a give and take. Important to make mental connections, friends, social situations are a powerful feature this child’s life.</p>
@@ -46,7 +52,9 @@
             </div>
             <div class="col-md-3 mx-auto">
                 <div class="card-view">
-                    <img src="~/images/graybox.png" class="card-img-top" />
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="card-img-top" >
+                        <source src="~/videos/Water.mp4" type="video/mp4" />
+                    </video>
                     <div class="card-body">
                         <h5 class="card-title">Water</h5>
                         <p class="card-text">Water takes the shape of whatever container it is in. Sensitive, uncomfortable around new people or different environments, (sensitive to vibrations), encourage child to trust intuition, encourage artistic or creative expression in fun and play.</p>

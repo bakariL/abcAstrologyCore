@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace ckl.Models
 {
     public class Customer
-    {
-        
+    {     
         public int Id { get; set; }
         public string UserId { get; set; }
         public string PartnerId { get; set; }

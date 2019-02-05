@@ -1,21 +1,46 @@
-﻿@model Request
+﻿@model RequestViewModel
 @{
     ViewData["Title"] = "SaturnRequest";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
 <h2>SaturnRequest</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="row">
-            <div class="col-6">&nbsp;</div>
-            <div class="col-6">
-                <ul id="messagesList"></ul>
-            </div>
-        </div>      
-    </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>
+
+
+<div class="container">
+    <h2>All Requests</h2>
+    <div class="row">
+        <div class="col-md-3 profile">
+            <div class="profile-userpic"></div>
+            <table class="bootstrap-table table  table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">UserName</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                @foreach (var req in Model.RequestsIE)
+                {
+                    <tr>
+                        <td>@req.Id</td>
+                        <td>@req.UserFirstName </td>
+                        <td>@req.UserLastName</td>
+                        <td>
+                            <a asp-controller="Customer" asp-action="Edit" asp-route-id="@req.Id">Edit</a> |
+                            <a asp-controller="Customer" asp-action="Details" asp-route-id="@req.Id">Details</a> |
+                            <a asp-controller="Customer" asp-action="Delete" asp-route-id="@req.Id">Remove</a>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>

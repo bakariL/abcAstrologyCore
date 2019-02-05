@@ -43,10 +43,7 @@ namespace ckl.Data
         {
             base.OnModelCreating(modelBuilder);
           
-            modelBuilder.Entity<Customer>(entity =>
-            {
-                entity.ToTable("Customers", "dbo").HasKey("Id");
-            });
+         
             modelBuilder.Entity<ReadingReportTypeAssociation>().HasKey(r => new { r.ReportID, r.ReportTypeID });
             modelBuilder.Entity<PartnerTypeAssociation>().HasKey(r => new { r.PartnerTypeId, r.PartnerId });
             modelBuilder.Entity<ApplicationUser>(entity =>
@@ -60,9 +57,6 @@ namespace ckl.Data
             modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("tblUserLogins", "dbo");
             modelBuilder.Entity<IdentityUserToken<string>>().ToTable("tblUserTokens", "dbo");
             modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("tblRoleClaims", "dbo");
-
-
-
         }
     }
 }

@@ -4,31 +4,32 @@
     ViewData["Title"] = "index";
     Layout = "~/Views/Shared/_homeLayout.cshtml";
 }
-<div class="row jumbotron" id="topJumbo">
-    <header>
-        <div class="overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="~/videos/Pexels%20Videos%201621682.mp4" type="video/mp4">
-        </video>
-        <div class="container h-100">
-            <div class="d-flex text-center h-100">
-                <div class="my-auto w-100 text-white">
-                    <h2 class="display-3 topTitle">Character is Destiny</h2>
-                </div>
+<div class="container-fluid">
+    <div class="row ">
+                <header>
+                    <div class="overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="~/videos/saturn-rising.mp4" type="video/mp4">
+                    </video>
+                    <div class="container h-100">
+                        <div class="d-flex text-center h-100">
+                            <div class="my-auto w-100 text-white">
+                                <h2 class="display-3 topTitle">Character is Destiny</h2>
+                            </div>
+                        </div>
+                        </div>
+                </header>
             </div>
-        </div>
-    </header>
-</div>
-
-<section id="SaturnReport" class="my-5">
-    @await Component.InvokeAsync("HomeSaturnReport")
-</section>
-<section id="LearningCenter" class="my-5">
-    @await Component.InvokeAsync("LearningCenter")
-</section>
-<section id="newsletterEmail" class="my-5">
-    @await Component.InvokeAsync("NewsLetterEmail")
-</section>
+    </div>
+    <section id="saturnReport" class="my-5">
+        @await Component.InvokeAsync("HomeSaturnReport")
+    </section>
+    <section id="learningCenter" class="my-5">
+        @await Component.InvokeAsync("LearningCenter")
+    </section>
+    <section id="newsletterEmail" class="my-5">
+        @await Component.InvokeAsync("NewsLetterEmail")
+    </section>
     <section id="whySaturn" class="my-5">
         @await Component.InvokeAsync("WhySaturn")
     </section>
@@ -38,20 +39,19 @@
     <!-- Plans -->
     <section id="plans">
         @await Component.InvokeAsync("Plans")
-
     </section>
     <section id="mission">
         @await Component.InvokeAsync("Mission")
-
     </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
-    <script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
-    <script src="~/js/chat.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/js/chat.js"></script>
 
-    @section Scripts {
-        <script type="text/javascript">
+@section Scripts {
+    <script type="text/javascript">
 
-        </script>
-    }
+    </script>
+}
 

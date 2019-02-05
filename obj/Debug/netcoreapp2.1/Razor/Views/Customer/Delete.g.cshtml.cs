@@ -86,7 +86,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n\r\n\r\n<div class=\"container\">\r\n    <h2>Delete User</h2>\r\n    <div class=\"col-md-9\">\r\n        <div class=\"profile-content\">\r\n            ");
             EndContext();
             BeginContext(426, 1239, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6913f661fc8e4a6a99fb8439418bda14", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "158523bb88af43c9bd1f54dd978a5863", async() => {
                 BeginContext(492, 431, true);
                 WriteLiteral(@"
 
@@ -151,7 +151,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral("</td>\r\n                            <td>\r\n                                ");
                 EndContext();
                 BeginContext(1319, 83, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a6b5c5c48b684c0d8e23d02f20c56e30", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b43cb328efd2496089111f7daf40ce87", async() => {
                     BeginContext(1394, 4, true);
                     WriteLiteral("Edit");
                     EndContext();
@@ -196,7 +196,7 @@ using ckl.Models.ViewModels;
                 WriteLiteral("                </table>\r\n                ");
                 EndContext();
                 BeginContext(1537, 107, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fe7b3900485944c48644e6c5d4a78d0c", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de6343059bc44687a0374726f4aa0238", async() => {
                     BeginContext(1628, 7, true);
                     WriteLiteral(" Delete");
                     EndContext();

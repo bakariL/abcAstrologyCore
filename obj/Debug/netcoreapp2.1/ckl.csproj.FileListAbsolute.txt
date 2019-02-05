@@ -61,7 +61,6 @@ C:\Users\blewis\Projects\abc\ckl\ckl\bin\Debug\netcoreapp2.1\credentials.json
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Newsletter\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Newsletter\Create.g.cshtml.cs
-C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Reports\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\Account\Error.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
@@ -121,3 +120,5 @@ C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\Index.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\SendMessage.g.cshtml.cs
 C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Chat\SendMessageToGroup.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_LoginPartial.g.cshtml.cs
+C:\Users\blewis\Projects\abc\ckl\ckl\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\TopNavBar\Default.g.cshtml.cs

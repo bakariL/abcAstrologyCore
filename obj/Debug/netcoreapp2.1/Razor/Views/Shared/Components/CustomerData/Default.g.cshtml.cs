@@ -73,7 +73,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(84, 223, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3951d773f55f49309f8096322d3cc812", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec4df61fe5c54ae4afc698a72cd8ce5e", async() => {
                 BeginContext(90, 210, true);
                 WriteLiteral("\r\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\">\r\n\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Default view showing</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(309, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0d132118f4b94ff68159909914066b79", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc6ca90abaf7409caf123436b7970631", async() => {
                 BeginContext(315, 55, true);
                 WriteLiteral("\r\n    <h4 class=\"card-header\"> New Users </h4>\r\n    <p>");
                 EndContext();

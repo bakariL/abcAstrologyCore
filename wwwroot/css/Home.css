@@ -1,19 +1,17 @@
-﻿body {
+﻿.nave
 
-    padding-top: 20px;
-    padding-bottom: 20px;
-  
-}
-.navbar-inverse {
-    max-width:1760px;
-
+.navbar-header{
+    margin-left: 5%;
 }
 
+.navbar-collapse  {
+    margin-right: 10%;
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .topTitle{
@@ -21,12 +19,12 @@
 }
 
 
-.container {
-    width: 1760px;
-
-    overflow-x: hidden!important;
+.navbar-brand{
+    margin-left: 2%;
 }
-
+.jumbotron {
+    padding: 0 !important;
+}
     .container .jumbotron, .container-fluid .jumbotron {
         
         background-color: #403C50;
@@ -47,7 +45,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        min-width: 100%;
+        max-width: 100%;
         min-height: 100%;
         width: auto;
         height: auto;
@@ -83,7 +81,7 @@
     width: auto;
     background-color: #DADDEC;
 }
-#LearningCenter {
+#learningCenter {
     background-color: #FFF4E1;
 }
 
