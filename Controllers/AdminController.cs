@@ -29,6 +29,8 @@ namespace ckl.Controllers
         private readonly INewsLetterRepository _newsLetterRepository;
         private readonly IHubContext<ChatHub> _hubContext;
         private readonly IRequestRepository _requestRepository;
+        private readonly ChatHub _chatHub;
+
 
 
         public AdminController(
@@ -41,7 +43,8 @@ namespace ckl.Controllers
             SignInManager<ApplicationUser> signInManager, 
             IEmailSender emailSender,
             IRequestRepository requestRepository,
-            IHubContext<ChatHub> hubContext
+            IHubContext<ChatHub> hubContext,
+            ChatHub chatHub
             )
         {
             _context = context;
@@ -54,6 +57,7 @@ namespace ckl.Controllers
             _newsLetterRepository = newsLetterRepository;
             _requestRepository = requestRepository;
             _hubContext = hubContext;
+            _chatHub = chatHub;
         }
 
 

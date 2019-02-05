@@ -29,15 +29,14 @@ namespace SignalRChat.Hubs
             _requestRepository = requestRepository;
         }
 
-        public async Task SendMessage(string firstName, string lastName, DateTime dob)
+        public async Task SendMessage(string firstName, string lastName, DateTime dob, string email, string gender)
         {
             var model = new Request();
             model.UserFirstName = firstName;
             model.UserLastName = lastName;
             model.UserDOB = dob;
-            //model.Email = email;
-            //model.UserDOB = dob;
-            //model.Gender = gender;
+            model.Email = email;
+            model.Gender = gender;
             _requestRepository.Add(model);
             var allRequests = _requestRepository.GetAll();
             model.Count = _requestRepository.CountAll(allRequests);

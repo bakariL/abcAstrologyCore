@@ -74,7 +74,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(79, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6f91375fe93a49f8a0c4f0f90ab66eba", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0f6f847cda264b07869b2384cc07d808", async() => {
                 BeginContext(85, 89, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Default</title>\r\n");
                 EndContext();
@@ -94,7 +94,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(183, 3473, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "90d671e717da4d5d8bd88724d1941b68", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "db08f8caa7da47e995e7b04517e15f50", async() => {
                 BeginContext(189, 1012, true);
                 WriteLiteral(@"
     <div class=""container container-fluid"">
@@ -119,7 +119,7 @@ using ckl.Models.ViewModels;
                         ");
                 EndContext();
                 BeginContext(1201, 104, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9bbae46af0b74bf5b0b92aa60e7c45c5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f534047cab4c42abbfe665bca3db1137", async() => {
                     BeginContext(1290, 11, true);
                     WriteLiteral("SIGN UP NOW");
                     EndContext();

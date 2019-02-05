@@ -1,4 +1,4 @@
-﻿@model SaturnReportViewModel
+﻿@model RequestViewModel
 @{
     Layout = null;
 }
@@ -13,26 +13,32 @@
         <div class="col-md-2"></div>
         <div class="col-md-8 mx-auto">
             <h3>Get your free report</h3>
-            <form method="post" asp-controller="SaturnReport" asp-action="Request">
+            <form asp-controller="SaturnReport" asp-action="Request" method="post">
                 <div class="form-group">
                     <label asp-for="UserFirstName">First Name</label>
                     <input type="text" asp-for="UserFirstName" id="firstName" class="form-control" />
                     <span asp-validation-for="UserFirstName"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="UserFirstName">Last Name</label>
-                    <input type="text" asp-for="UserFirstName" id="lastName" class="form-control" />
-                    <span asp-validation-for="UserFirstName"></span>
+                    <label asp-for="UserLastName">Last Name</label>
+                    <input type="text" asp-for="UserLastName" id="lastName" class="form-control" />
+                    <span asp-validation-for="UserLastName"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="UserEmail">Email</label>
-                    <input type="email" asp-for="UserEmail" id="email" class="form-control" />
-                    <span asp-validation-for="UserEmail"></span>
+                    <label asp-for="Email">Email</label>
+                    <input type="email" asp-for="Email" id="email" class="form-control" />
+                    <span asp-validation-for="Email"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="DateofBirth">Birthdate</label>
-                    <input type="date" asp-for="DateofBirth" id="dob" class="form-control" />
-                    <span asp-validation-for="DateofBirth"></span>
+                    <label asp-for="UserDOB">Birthdate</label>
+                    <input type="date" asp-for="UserDOB" id="dob" class="form-control" />
+                    <span asp-validation-for="UserDOB"></span>
+                </div>
+                <div class="form-group">
+                    <select id="gender" asp-for="Gender"  class="form-control">
+                        <option >Male</option>
+                        <option>Female</option>
+                    </select>
                 </div>
                 <div class="row">&nbsp;</div>
                 <div class="row">
@@ -40,11 +46,13 @@
                         <hr />
                     </div>
                 </div>
-                <input  type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
+                <input type="submit" id="sendButton" class="btn btn-primary" value="Request Report" />
             </form>
-            </div>
+        </div>
     </div>
-    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+
+    <script src="~/lib/signalr/signalr.js"></script>
     <script src="~/js/chat.js"></script>
+    <script src="~/js/es5-chat.js"></script>
 </body>
 </html>

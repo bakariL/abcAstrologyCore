@@ -11,7 +11,7 @@ connection.on("ReceiveMessage", function (user, message, date) {
     incrementValue();
 });
 
-
+connection.invoke("SendMessage", user, message).catch(err => console.error(err.toString()));
 connection.start().catch(function (err) {
     return console.error(err.toString());
 });
@@ -26,6 +26,19 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     event.preventDefault();
 });
 
+async function start() {
+    try {
+        await connection.start();
+        console.log('connected');
+    } catch (err) {
+        console.log(err);
+        setTimeout(() => start(), 5000);
+    }
+};
+
+connection.onclose(async () => {
+    await start();
+});
 
 function incrementValue() {
     var value = parseInt(document.getElementById('number').value, 10);

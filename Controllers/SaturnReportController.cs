@@ -170,14 +170,27 @@ namespace ckl.Controllers
             return View(model);
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> Request(string firstname, string lastname, DateTime dob)
+       
+        public async Task<IActionResult> Request()
         {
-            await _chatHub.SendMessage(firstname, lastname, dob);
-            return RedirectToAction("Index", "Admin");
+            var request = new RequestViewModel();
+          
+            return View(request);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Request(RequestViewModel requestView)
+        {
+
+            var firstname = requestView.UserFirstName;
+            var lastname = requestView.UserLastName;
+            var email = requestView.Email;
+            var dob = requestView.UserDOB;
+            var gender = requestView.Gender;
+         
+           await _chatHub.SendMessage(firstname, lastname, dob, email, gender);
+           return RedirectToAction("Index", "Admin");
+        }
 
 
 

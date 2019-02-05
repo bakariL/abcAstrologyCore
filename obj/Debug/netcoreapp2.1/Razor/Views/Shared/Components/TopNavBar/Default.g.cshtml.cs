@@ -80,7 +80,7 @@ using ckl.Data;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(238, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1592c140065d42a6a7aa4731cd0bef1b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d128e07f163d47afab60730b6d5aa3a4", async() => {
                 BeginContext(244, 89, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Default</title>\r\n");
                 EndContext();
@@ -100,12 +100,12 @@ using ckl.Data;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(342, 3185, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "aacd75a00c704e17b10211b132caff48", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "85f3f508f414450fbb398752834b1307", async() => {
                 BeginContext(348, 142, true);
                 WriteLiteral("\r\n    <nav class=\"navbar navbar-expand navbar-dark bg-dark static-top\">\r\n        <a class=\"navbar-brand mr-1\" href=\"index.html\"></a>\r\n        ");
                 EndContext();
                 BeginContext(490, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b34aa0bc74104910bceeae202cdab6fc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "cefd212e7c914bf1bba6f95de68f4138", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -124,7 +124,7 @@ using ckl.Data;
                 WriteLiteral("\r\n        <!-- Navbar Search -->\r\n        ");
                 EndContext();
                 BeginContext(568, 527, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "056f4420080a4568a1be7f87aeedd47f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8323e7ade4042faa3ef48ad1e26c777", async() => {
                     BeginContext(653, 435, true);
                     WriteLiteral(@"
             <div class=""input-group"">

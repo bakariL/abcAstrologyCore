@@ -18,9 +18,9 @@ namespace ckl.ViewComponents
             _saturnReportRepository = saturnReportRepository;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync(SaturnReportViewModel model)
+        public async Task<IViewComponentResult> InvokeAsync(RequestViewModel model)
         {
-            var _model =  model ?? new SaturnReportViewModel();
+            var _model =  model ?? new RequestViewModel();
 
             return View(_model);
         }
