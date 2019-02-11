@@ -131,6 +131,7 @@ namespace ckl
             {
                 routes.MapHub<ChatHub>("/chatHub");
             });
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -72,7 +72,7 @@ using ckl.Models.ViewModels;
             WriteLiteral("<div class=\"container-fluid\">\r\n    <div class=\"row \">\r\n        <header>\r\n            <div class=\"overlay\"></div>\r\n            <video playsinline=\"playsinline\" autoplay=\"autoplay\" muted=\"muted\" loop=\"loop\">\r\n                ");
             EndContext();
             BeginContext(374, 58, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8745eb62e2ac4cca9d463382e2282c0e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("source", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "ca9f1dfeb7394098a848cdd10acb2d63", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

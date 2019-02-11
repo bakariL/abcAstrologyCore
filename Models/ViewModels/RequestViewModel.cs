@@ -19,6 +19,10 @@ namespace ckl.Models.ViewModels
         public string Gender { get; set; }
         public string Email { get; set; }
         public string Type { get; set; }
+        public int DobYear { get; set; }
+        public int DobDay { get; set; }
+        public int DobMonthnum { get; set; }
+        public string DobDate { get; set; }
         public int UserZip { get; set; }
         public string UserName { get; set; }
         public DateTime DateRequested { get; set; }

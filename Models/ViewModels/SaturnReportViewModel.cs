@@ -14,6 +14,7 @@ namespace ckl.Models.ViewModels
         public string UserFirstName { get; set; }
         public string UserLaastName { get; set; }
         public string UserEmail { get; set; }
+        public int RequestNumber { get; set; }
         public string Title { get; set; }
         public string AuthorFirstName { get; set; }
         public string AuthorLastName { get; set; }

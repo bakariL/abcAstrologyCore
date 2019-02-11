@@ -173,23 +173,30 @@ namespace ckl.Controllers
        
         public async Task<IActionResult> Request()
         {
-            var request = new RequestViewModel();
+            var request = new Request();
           
             return View(request);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Request(RequestViewModel requestView)
+        public async Task<IActionResult> Request(Request request)
         {
+            var model = new Request();
+       
+            model.UserDOB = request.UserDOB;
+            model.Email = request.Email;
+            model.UserFirstName = request.UserFirstName;
+            model.UserLastName = request.UserLastName;
+            var email = model.Email;
+            var dob = model.UserDOB;
+  
+            _requestRepository.Add(model);
+            var allRequests = _requestRepository.GetAll();
+            model.Count = _requestRepository.CountAll(allRequests);
+        
 
-            var firstname = requestView.UserFirstName;
-            var lastname = requestView.UserLastName;
-            var email = requestView.Email;
-            var dob = requestView.UserDOB;
-            var gender = requestView.Gender;
-         
-           await _chatHub.SendMessage(firstname, lastname, dob, email, gender);
-           return RedirectToAction("Index", "Admin");
+            await _chatHub.SendMessage(email, dob);
+            return RedirectToAction("Index", "Admin", model);
         }
 
 

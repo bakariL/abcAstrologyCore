@@ -17,6 +17,7 @@ namespace ckl.Models
         public string FileId { get; set; }
         public int UserIntId { get; set; }
         public decimal BaseCost { get; set; }
+        public int RequestNumber { get; set; }
         public string UserName { get; set; }
         public DateTime DateofBirth { get; set; }
         public DateTime BeginningDateofBirth { get; set; }
@@ -31,12 +32,6 @@ namespace ckl.Models
         public string Image { get; set; }
         public bool IsSubscribed { get; set; }
         public DateTime Created { get; set; }
-
-
-        [NotMapped]
-        public virtual ICollection<Customer> CustomersList { get; set; }
-        [NotMapped]
-        public virtual ICollection<Partner> PartnerList{ get; set; }
 
     }
 }
