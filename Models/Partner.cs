@@ -18,7 +18,6 @@ namespace ckl.Models
         public string Email { get; set; }
         public string Name { get; set; }
         public string PartnerId { get; set; }
-        public int CustomerCount { get; set; }
         public int SaturnReportCount { get; set; }
         public int SaturnReportsRequested { get; set; }
         public int SaturnReportsSent { get; set; }

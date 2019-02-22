@@ -13,6 +13,5 @@ namespace ckl.Models
         public string Partnertype { get; set; }
         public string UserId { get; set; }
 
-        public virtual ICollection<Partner> Partners { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using ckl.Models;
+using ckl.Models;
 using ckl.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -12,10 +12,6 @@ namespace ckl.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
-        public ApplicationDbContext()
-        {
-        }
-
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -41,16 +37,10 @@ namespace ckl.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
-          
-         
+            base.OnModelCreating(modelBuilder);       
             modelBuilder.Entity<ReadingReportTypeAssociation>().HasKey(r => new { r.ReportID, r.ReportTypeID });
             modelBuilder.Entity<PartnerTypeAssociation>().HasKey(r => new { r.PartnerTypeId, r.PartnerId });
-            modelBuilder.Entity<ApplicationUser>(entity =>
-            {
-                entity.ToTable("tblUsers", "dbo").HasKey("Id");
-                entity.HasMany(x => x.UserRoles).WithOne().HasForeignKey(x => x.UserId).IsRequired();
-            });
+            modelBuilder.Entity<ApplicationUser>().ToTable("tblUsers", "dbo");
             modelBuilder.Entity<IdentityRole>().ToTable("tblRoles", "dbo");
             modelBuilder.Entity<IdentityUserRole<string>>().ToTable("tblUserRoles", "dbo");
             modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("tblUserClaims", "dbo");

@@ -21,6 +21,7 @@ namespace ckl.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        private readonly IRoleRepository _roleRepository;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
@@ -29,6 +30,7 @@ namespace ckl.Areas.Identity.Pages.Account
         private readonly IPartnerRepository _partnerRepository;
         private readonly IPartnerTypeAssociationRepository _partnerTypeAssociationRepository;
         public RegisterModel(
+            IRoleRepository roleRepository,
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
@@ -38,6 +40,7 @@ namespace ckl.Areas.Identity.Pages.Account
             IPartnerTypeAssociationRepository partnerTypeAssociationRepository
             )
         {
+            _roleRepository = roleRepository;
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
@@ -90,12 +93,13 @@ namespace ckl.Areas.Identity.Pages.Account
             {
                 var user = new ApplicationUser { FirstName = Input.FirstName, LastName = Input.LastName, UserName = Input.Email, Email = Input.Email };
                 var customer = new Customer() { FirstName = Input.FirstName, LastName = Input.LastName, UserName = Input.Email, Email = Input.Email };
-
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-
-                    var role = await _userManager.AddToRoleAsync(user, "USER");
+                    
+                 var role = await _userManager.AddToRoleAsync(user, "USER");
+                 
                     //await _partnerRepository.Insert(new Partner
                     //{
                     //    PartnerId = user.Id,
@@ -113,15 +117,13 @@ namespace ckl.Areas.Identity.Pages.Account
                         LastName = user.LastName,
                         UserName = user.UserName,
                         Email = user.Email,
-                        DateRegistered = DateTimeExtensions.EstNow()
+                       // DateRegistered = DateTimeExtensions.EstNow()
 
                     });
                     _customerRepository.Save();
                     _logger.LogInformation("User created a new account with password.");
 
                     //associate the user with the default partner                  
-
-
                     //await _partnerTypeAssociationRepository.Insert(new PartnerTypeAssociation
                     //{
                     //    PartnerId = user.Id,

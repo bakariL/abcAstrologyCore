@@ -21,6 +21,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SignalRChat.Hubs;
 
+
 namespace ckl
 {
     public class Startup
@@ -50,11 +51,11 @@ namespace ckl
                 options.CheckConsentNeeded = context => true;
                  options.MinimumSameSitePolicy = SameSiteMode.None;
              });
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"), b => b.UseRowNumberForPaging()));
-
+            services.AddEntityFrameworkNpgsql()
+                    .AddDbContext<ApplicationDbContext>(options => 
+                    options.UseNpgsql(connectionString));      
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Stores.MaxLengthForKeys = 128;
@@ -67,15 +68,15 @@ namespace ckl
             })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultUI()
-
+                .AddRoles<IdentityRole>()
                 .AddDefaultTokenProviders();
-            //services.AddMvc(config => {
-            //    var policy = new AuthorizationPolicyBuilder()
-            //            .RequireAuthenticatedUser()
-            //            .Build();
-            //    config.Filters.Add(new AuthorizeFilter(policy));
-            //})
-            
+            services.AddMvc(config => {
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                       .Build();
+               config.Filters.Add(new AuthorizeFilter(policy));
+            });
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<ChatHub >();
             services.AddScoped<IPartnerTypeAssociationRepository, PartnerTypeAssociationRepository>();
@@ -85,9 +86,11 @@ namespace ckl
             services.AddScoped<INewsLetterRepository, NewsLetterRepository>();
             services.AddScoped<ISaturnReportRepository, SaturnReportRepository>();
             services.AddScoped<IRequestRepository, RequestRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddSession();
             services.AddMvc()
-              .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+              
               .AddSessionStateTempDataProvider();
 
             services.AddSignalR();

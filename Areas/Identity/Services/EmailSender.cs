@@ -3,6 +3,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
@@ -33,25 +35,39 @@ namespace ckl.Areas.Identity.Services
         {
             try
             {
-                MailMessage htmlMessage;
-                SmtpClient smtpClient;
+                
+                var msg = new SendGridMessage();
+                msg.SetFrom(new EmailAddress("bakari.lewis1@outlook.com", "SendGrid DX Team"));
+                var recipients = new List<EmailAddress>
+                {
+                    new EmailAddress("lewisbakari@yahoo.com", "Jeff Smith"),
+                    new EmailAddress("bakarilewis@gmail.com", "Anna Lidman")                };
+                msg.AddTos(recipients);
+                msg.SetSubject("Testing the SendGrid C# Library");
+                msg.AddContent(MimeType.Text, "Hello World plain text!");
+                msg.AddContent(MimeType.Html, "<p>Hello World!</p>");
+            var apiKey = "AstroABC";
+            var client = new SendGridClient(apiKey);
 
-                htmlMessage = new MailMessage(_configuration["EmailSender:FromAddress"], sendTo, subject, body);
-                htmlMessage.IsBodyHtml = true;
+                // MailMessage htmlMessage;
+                 //SmtpClient smtpClient;
+                    
 
-                smtpClient = new SmtpClient(_configuration["EmailSender:SmtpServer"]);
+                // htmlMessage = new MailMessage(_configuration["EmailSender:FromAddress"], sendTo, subject, body);
+                // htmlMessage.IsBodyHtml = true;
+                // smtpClient = new SmtpClient(_configuration["EmailSender:SmtpServer"]);
 
-                if (string.IsNullOrEmpty(_configuration["EmailSender:Password"]))
-                    smtpClient.UseDefaultCredentials = true;
-                else
-                    smtpClient.Credentials = new System.Net.NetworkCredential(_configuration["EmailSender:FromAddress"], _configuration["EmailSender:Password"]);
+                // if (string.IsNullOrEmpty(_configuration["EmailSender:Password"]))
+                 //    smtpClient.UseDefaultCredentials = true;
+               // else
+                //     smtpClient.Credentials = new System.Net.NetworkCredential(_configuration["EmailSender:FromAddress"], _configuration["EmailSender:Password"]);
 
-                if (Boolean.TryParse(_configuration["EmailSender:EnableSsl"], out bool enableSsl))
-                    smtpClient.EnableSsl = enableSsl;
+               //  if (Boolean.TryParse(_configuration["EmailSender:EnableSsl"], out bool enableSsl))
+                 //    smtpClient.EnableSsl = enableSsl;
 
-                smtpClient.Send(htmlMessage);
+               //  smtpCl(msg);
 
-                _logger.LogInformation($"Sent email in context of { subject } to: \"{ sendTo }\"");
+                // _logger.LogInformation($"Sent email in context of { subject } to: \"{ sendTo }\"");
             }
             catch (Exception ex)
             {

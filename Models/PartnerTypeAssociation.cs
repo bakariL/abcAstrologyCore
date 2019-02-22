@@ -9,8 +9,8 @@ namespace ckl.Models
     {
         public Guid PartnerTypeId { get; set; }
         public string PartnerId { get; set; }
+        public string TypeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Email { get; set; }
     }
 }
