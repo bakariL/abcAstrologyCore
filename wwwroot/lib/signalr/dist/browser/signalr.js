@@ -3728,4 +3728,3 @@ var JsonHubProtocol = /** @class */ (function () {
 /***/ })
 /******/ ]);
 });
-//# sourceMappingURL=signalr.js.map

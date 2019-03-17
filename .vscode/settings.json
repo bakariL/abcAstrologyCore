@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/e520910c-caae-429c-a034-2bb393184bb0/resourceGroups/AbcAstrology/providers/Microsoft.Web/sites/AbcAstrology",
+  "appService.deploySubpath": ""
+}

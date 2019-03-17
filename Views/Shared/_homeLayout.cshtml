@@ -10,8 +10,8 @@
     <title>@ViewData["Title"] - ckl</title>
 
     <environment include="Development">
-        @*<link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+        <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/bootstrap-table/dist/bootstrap-table.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
         <link href="~/css/Home.css" rel="stylesheet" />
@@ -47,13 +47,15 @@
     @RenderBody()
     <hr />
     <environment include="Development">
-        @*<script src="~/Identity/lib/jquery/dist/jquery.js"></script>
-            <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+        <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+            <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/Identity/js/site.js" asp-append-version="true"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-        <script src="~/lib/jquery/dist/siteJQuery.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
     </environment>
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
@@ -68,8 +70,7 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-
-        <script src="~/Identity/js/site.min.js" asp-append-version="true"></script>
+   
     </environment>
 
     @RenderSection("Scripts", required: false)

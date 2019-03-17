@@ -9,7 +9,32 @@
     <title>Default</title>
 </head>
 <body>
+
     <div class="container container-fluid">
+            <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            User..........<input type="text" id="userInput" />
+            <br />
+            Message...<input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+
+
         <form asp-controller="SaturnReport" asp-action="Request" method="post">
             <div class="col-md-10 offset-md-1">
                 <span class="anchor" id="formComplex"></span>
@@ -19,12 +44,12 @@
                 <div class="form-row mt-4">
                     <div class="col-sm-6 pb-3">
                         <label asp-for="UserFirstName">First Name</label>
-                        <input type="text" asp-for="UserFirstName" class="form-control" id="firstName">
+                        <input type="text" asp-for="UserFirstName" class="form-control" id="userInput">
                         <span asp-validation-for="UserFirstName"></span>
                     </div>
                     <div class="col-sm-6 pb-3">
                         <label asp-for="UserLastName">Last Name</label>
-                        <input asp-for="UserLastName" type="text" class="form-control" id="lastName">
+                        <input asp-for="UserLastName" type="text" class="form-control" id="messageInput">
                         <span asp-validation-for="UserLastName"></span>
                     </div>
                     @*<div class="form-group row">
@@ -156,11 +181,5 @@
     </div>
     <!--/row-->
 
-
-
-
-    <script src="~/lib/signalr/signalr.js"></script>
-    <script src="~/js/chat.js"></script>
-    <script src="~/js/es5-chat.js"></script>
 </body>
 </html>

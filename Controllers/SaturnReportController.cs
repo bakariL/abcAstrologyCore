@@ -153,7 +153,6 @@ namespace ckl.Controllers
 
      
 
-
         [HttpPost]
         public IActionResult Update(Guid id, SaturnReport saturn)
         {
@@ -196,11 +195,8 @@ namespace ckl.Controllers
             model.Count = _requestRepository.CountAll(allRequests);
         
 
-            await _chatHub.SendMessage(email, dob);
+           // await _chatHub.SendMessage(email, dob);
             return RedirectToAction("Index", "Admin", model);
         }
-
-
-
     }
 }
