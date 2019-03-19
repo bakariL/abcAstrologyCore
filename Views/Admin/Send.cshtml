@@ -9,7 +9,7 @@
     <div class="row report">
         <div class="col-md-offset-4">
 
-            <form method="post" enctype="multipart/form-data" asp-controller="Admin" asp-action="Send">
+            <form method="post" enctype="multipart/form-data" asp-controller="Notification" asp-action="PostMessage">
                 <h3>Create Email </h3>
                 <div class="form-group">
                     <label asp-for="Email">To</label>
@@ -43,7 +43,7 @@
                         Show All
                     </option>
                 </select>*@ -->
-                <button asp-controller="Admin" asp-action="Send" type="submit" class="btn btn-success">Send </button>
+                <button type="submit" class="btn btn-success">Send </button>
             </form>
         </div>
         <div class="col-md-3"></div>
