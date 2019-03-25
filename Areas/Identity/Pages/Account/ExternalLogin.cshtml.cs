@@ -62,7 +62,7 @@ namespace ckl.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnGetCallbackAsync(string returnUrl = null, string remoteError = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/~/Home/AbcHome");
+            returnUrl = returnUrl ?? Url.Content("~/Home/AbcHome");
             if (remoteError != null)
             {
                 ErrorMessage = $"Error from external provider: {remoteError}";
