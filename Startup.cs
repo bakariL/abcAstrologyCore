@@ -70,6 +70,14 @@ namespace ckl
                 .AddDefaultUI()
                 .AddRoles<IdentityRole>()
                 .AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(options =>
+                // Default Lockout settings.
+            {
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 100;
+                options.Lockout.AllowedForNewUsers = true;
+            });
+
             services.AddMvc(config => {
                 var policy = new AuthorizationPolicyBuilder()
                     .RequireAuthenticatedUser()

@@ -86,9 +86,9 @@ namespace ckl.Areas.Identity.Pages.Account
         }
 
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null, string partnerName = "default")
+        public async Task<IActionResult> OnPostAsync(string returnUrl =  "Home/AbcHome", string partnerName = "default")
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+            returnUrl = returnUrl ?? Url.Content("~/Home/AbcHome");
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { FirstName = Input.FirstName, LastName = Input.LastName, UserName = Input.Email, Email = Input.Email };
