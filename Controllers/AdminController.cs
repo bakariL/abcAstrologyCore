@@ -207,7 +207,5 @@ namespace ckl.Controllers
         {
             return View();
         }
-
-  
     }
 }
